@@ -52,4 +52,4 @@ Arete scales beyond individual buildings to connect portfolios, campuses, and ci
 # Why Choose Arete?
 Arete eliminates technical barriers to digital integration, enabling organizations to achieve excellence—fully realizing the potential of their systems and people. With Arete, connections are self-describing, intent-driven, governed by context and capability, and ready for cross-domain innovation.
 
-Project Arete http://projectarete.io
+Project Arete [projectarete.io](http://projectarete.io)
