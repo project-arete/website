@@ -19,7 +19,8 @@ The Arete orchestration workflow is policy-driven and centers on aligning Nodes,
 * Contexts are matched (e.g., two Nodes with identical Context IDs are considered interoperable).
 * Capabilities are declared, validated, and bound through CPs; providers and consumers are paired, and the orchestrator instantiates live, governed connections between them.
 * Connections are continuously monitored, auditable, and managed in accordance with zero-trust security models.
-Arete supports multi-orchestrator environments with overlapping or independently governed Realms. Nodes can be orchestrated simultaneously under multiple policies and authorities, supporting flexible, distributed governance.Arete-Onboarding.pdf
+Arete supports multi-orchestrator environments with overlapping or independently governed Realms. Nodes can be orchestrated simultaneously under multiple policies and authorities, supporting flexible, distributed governance.
+
 # Value Proposition
 Arete offers substantial benefits for organizations and developers:
 * Interoperability: Connects siloed systems across domains, enabling new business models, plug-and-play workflows, and emergent capabilities.
