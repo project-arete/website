@@ -13,7 +13,7 @@ Arete defines several key elements:
 # How Arete Works
 The Arete orchestration workflow is policy-driven and centers on aligning Nodes, Contexts, and Capabilities:
 * Orchestrators maintain inventories of Nodes from various constituent systems.
-* Contexts are matched (e.g., two Nodes with identical Context IDs are considered interoperable).
+* Contexts are matched (e.g., two Nodes with identical Context IDs are considered matched).
 * Capabilities are declared, validated, and bound through CPs; providers and consumers are paired, and the orchestrator instantiates live, governed connections between them.
 * Connections are continuously monitored, auditable, and managed in accordance with zero-trust security models.
 Arete supports multi-orchestrator environments with overlapping or independently governed Realms. Nodes can be orchestrated simultaneously under multiple policies and authorities, supporting flexible, distributed governance.
