@@ -9,9 +9,6 @@ Arete defines several key elements:
 * Connection Profiles (CPs) codify contracts that dictate interactions, specifying role ("provider" or "consumer"), connection terms, and enforceable properties.
 * Contexts group capabilities, anchoring how Nodes make their capabilities available for orchestration, enhancing understanding and semantic interoperability across domains.
 
-![Arete Building](Arete-building.png)
-Arete acts as the building’s single source of truth for operations, linking on-premises systems such as HVAC, lighting, and security with cloud-based services including BIM, CMMS, and utilities. This hybrid architecture demonstrates how Arete provides consistent, secure, and plug-and-play interoperability across all systems—enabling building owners, operators, and applications to work from the same trusted data fabric.
-
 
 # How Arete Works
 The Arete orchestration workflow is policy-driven and centers on aligning Nodes, Contexts, and Capabilities:
@@ -20,6 +17,10 @@ The Arete orchestration workflow is policy-driven and centers on aligning Nodes,
 * Capabilities are declared, validated, and bound through CPs; providers and consumers are paired, and the orchestrator instantiates live, governed connections between them.
 * Connections are continuously monitored, auditable, and managed in accordance with zero-trust security models.
 Arete supports multi-orchestrator environments with overlapping or independently governed Realms. Nodes can be orchestrated simultaneously under multiple policies and authorities, supporting flexible, distributed governance.
+
+![Arete Building](Arete-building.png)
+Arete acts as the building’s single source of truth for operations, linking on-premises systems such as HVAC, lighting, and security with cloud-based services including BIM, CMMS, and utilities. This hybrid architecture demonstrates how Arete provides consistent, secure, and plug-and-play interoperability across all systems—enabling building owners, operators, and applications to work from the same trusted data fabric.
+
 
 # Value Proposition
 Arete offers substantial benefits for organizations and developers:
