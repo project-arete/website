@@ -12,6 +12,7 @@ Arete defines several key elements:
 ![Arete Building](Arete-building.png)
 Arete acts as the building’s single source of truth for operations, linking on-premises systems such as HVAC, lighting, and security with cloud-based services including BIM, CMMS, and utilities. This hybrid architecture demonstrates how Arete provides consistent, secure, and plug-and-play interoperability across all systems—enabling building owners, operators, and applications to work from the same trusted data fabric.
 
+
 # How Arete Works
 The Arete orchestration workflow is policy-driven and centers on aligning Nodes, Contexts, and Capabilities:
 * Orchestrators maintain inventories of Nodes from various constituent systems.
