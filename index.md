@@ -30,6 +30,7 @@ Arete offers substantial benefits for organizations and developers:
  ![Arete Fleet](Arete-fleet.png)
 Arete scales beyond individual buildings to connect portfolios, campuses, and cities into a unified digital fabric. Each building operates independently through its own Arete instance while securely sharing relevant data with service providers, utilities, and government platforms. This distributed model enables portfolio visibility, smart-city coordination, and scalable interoperability across entire asset fleets.
 
+
 # Key Concepts in Arete
 
 | Concept | Description |
@@ -41,6 +42,7 @@ Arete scales beyond individual buildings to connect portfolios, campuses, and ci
 | Capability | Declares a Node's role within a CP (provider/consumer), with properties for how it operates. |
 | Connection | The live interaction channel is instantiated and governed by CP rules and orchestrator policies. |
 | Connection Profile (cp:profile.name) | Open specification of the interaction contract (always using at least one dot in the name). |
+
 # Example Workflows
 * Connecting healthcare, finance, energy, and safety domains by abstracting siloed protocols into domain-agnostic profiles.
 * Enabling digital twins, IoT, API clients, and broker-based federations with plug-and-play interfaces and automatic orchestration by policy.
