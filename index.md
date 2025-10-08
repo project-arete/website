@@ -31,6 +31,7 @@ Arete offers substantial benefits for organizations and developers:
 Arete scales beyond individual buildings to connect portfolios, campuses, and cities into a unified digital fabric. Each building operates independently through its own Arete instance while securely sharing relevant data with service providers, utilities, and government platforms. This distributed model enables portfolio visibility, smart-city coordination, and scalable interoperability across entire asset fleets.
 
 # Key Concepts in Arete
+
 | Concept | Description |
 |---|---|
 | Orchestrator System | Controls, enforces, and audits interactions between Nodes. |
