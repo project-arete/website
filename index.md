@@ -10,6 +10,7 @@ Arete defines several key elements:
 * Contexts group capabilities, anchoring how Nodes make their capabilities available for orchestration, enhancing understanding and semantic interoperability across domains.
 
 ![Arete Building](Arete-building.png)
+Arete acts as the building’s single source of truth for operations, linking on-premises systems such as HVAC, lighting, and security with cloud-based services including BIM, CMMS, and utilities. This hybrid architecture demonstrates how Arete provides consistent, secure, and plug-and-play interoperability across all systems—enabling building owners, operators, and applications to work from the same trusted data fabric.
 
 # How Arete Works
 The Arete orchestration workflow is policy-driven and centers on aligning Nodes, Contexts, and Capabilities:
@@ -25,6 +26,10 @@ Arete offers substantial benefits for organizations and developers:
 * Composability: Developers and operators can create, combine, and dynamically recompose services using standardized CPs without complex custom integration.
 * Governance: Policies, realms, and orchestration enable strong control and adaptability while supporting distributed authority structures.
 * Openness: All CPs and specifications are open-source and standards-driven, accelerating innovation and reducing vendor lock-in.
+
+ ![Arete Fleet](Arete-fleet.png)
+Arete scales beyond individual buildings to connect portfolios, campuses, and cities into a unified digital fabric. Each building operates independently through its own Arete instance while securely sharing relevant data with service providers, utilities, and government platforms. This distributed model enables portfolio visibility, smart-city coordination, and scalable interoperability across entire asset fleets.
+
 # Key Concepts in Arete
 | Concept | Description |
 |---|---|
