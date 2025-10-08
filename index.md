@@ -33,6 +33,7 @@ Arete scales beyond individual buildings to connect portfolios, campuses, and ci
 
 # Key Concepts in Arete
 
+
 | Concept | Description |
 |---|---|
 | Orchestrator System | Controls, enforces, and audits interactions between Nodes. |
@@ -42,6 +43,7 @@ Arete scales beyond individual buildings to connect portfolios, campuses, and ci
 | Capability | Declares a Node's role within a CP (provider/consumer), with properties for how it operates. |
 | Connection | The live interaction channel is instantiated and governed by CP rules and orchestrator policies. |
 | Connection Profile (cp:profile.name) | Open specification of the interaction contract (always using at least one dot in the name). |
+
 
 # Example Workflows
 * Connecting healthcare, finance, energy, and safety domains by abstracting siloed protocols into domain-agnostic profiles.
