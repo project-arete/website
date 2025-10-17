@@ -1,66 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Arete Primer</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Arete Primer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-    <header class="header">
-        <h1>Project Arete</h1>
-    </header>
-    
-    <main class="container">
-        <section class="hero">
-            <img src="Arete-fleet.png" alt="Arete Fleet" class="hero-image">
-        </section>
-        
-        <section class="content-section">
-            <h2>Mission</h2>
-            <p>Empowering communities through democratized access to autonomous transportation.</p>
-        </section>
-        
-        <section class="content-section">
-            <h2>Vision</h2>
-            <p>A world where autonomous vehicles serve humanity's collective needs rather than corporate interests alone.</p>
-        </section>
-        
-        <section class="content-section">
-            <h2>What We're Building</h2>
-            
-            <h3>Open Source Autonomous Platform</h3>
-            <ul>
-                <li>Community-owned fleet management system</li>
-                <li>Transparent AI decision-making frameworks</li>
-                <li>Decentralized coordination protocols</li>
-                <li>Privacy-first rider experience</li>
-            </ul>
-        </section>
-        
-        <section class="content-section">
-            <img src="Arete-building.png" alt="Arete Building" class="content-image">
-        </section>
-        
-        <section class="content-section">
-            <h2>Why It Matters</h2>
-            <p>Current autonomous vehicle development concentrates power and profit in the hands of a few corporations. Project Arete offers an alternative: technology that belongs to everyone, governed by community consensus, and designed to serve public good.</p>
-        </section>
-        
-        <section class="content-section">
-            <h2>Get Involved</h2>
-            <p>We're building in the open. Join us on <a href="https://github.com/project-arete">GitHub</a> to contribute code, documentation, or ideas.</p>
-        </section>
-        
-        <section class="content-section">
-            <h2>Contact</h2>
-            <p>Questions? Reach out to <a href="mailto:hello@projectarete.io">hello@projectarete.io</a></p>
-        </section>
-    </main>
-    
-    <footer class="footer">
-        <p>&copy; 2025 Project Arete. Open source for the community.</p>
-    </footer>
+  <header>
+    <h1>Project Arete Primer</h1>
+  </header>
+  <main>
+    <section>
+      <h2>What Is Arete?</h2>
+      <p>Arete is an open, interoperable architecture that transforms connectivity from address-based models to role- and context-based orchestration of distributed digital systems. It brings the CP Network vision to life, focusing on coordination, security, and composability through standardized Connection Profiles.</p>
+    </section>
+    <section>
+      <h2>Core Architecture</h2>
+      <ul>
+        <li><strong>Orchestrator Systems:</strong> control plane for brokering policies</li>
+        <li><strong>Constituent Systems:</strong> contribute Nodes (devices, assets, services)</li>
+        <li><strong>Nodes:</strong> atomic units with declared roles and capabilities</li>
+        <li><strong>Connection Profiles (CPs):</strong> contracts specifying role, terms, and properties</li>
+        <li><strong>Contexts:</strong> group capabilities for semantic interoperability</li>
+      </ul>
+    </section>
+    <section>
+      <h2>How Arete Works</h2>
+      <ul>
+        <li>Orchestrators maintain inventory of Nodes</li>
+        <li>Contexts matched for orchestration</li>
+        <li>Capabilities paired through CPs</li>
+        <li>Continuous audit and governance; zero-trust models</li>
+      </ul>
+      <img src="Arete-building.png" alt="Arete Building" style="max-width:100%; margin:2em 0;">
+      <p>Arete acts as the building's single source of truth for operations, linking HVAC, lighting, security, BIM, CMMS, etc. It demonstrates plug-and-play interoperability and a trusted data fabric for all stakeholders.</p>
+    </section>
+    <section>
+      <h2>Value Proposition</h2>
+      <ul>
+        <li><strong>Interoperability:</strong> connects siloed systems, enabling new models</li>
+        <li><strong>Security:</strong> role- and context-based, full auditability</li>
+        <li><strong>Composability:</strong> create and combine services without complex integration</li>
+        <li><strong>Governance:</strong> adaptable control, distributed authorities</li>
+        <li><strong>Openness:</strong> open-source, standards-driven, reduced lock-in</li>
+      </ul>
+      <img src="Arete-fleet.png" alt="Arete Fleet" style="max-width:100%; margin:2em 0;">
+      <p>Arete scales from buildings to cities, supporting distributed governance and scalable asset coordination for portfolios, campuses, and smart cities.</p>
+    </section>
+    <section>
+      <h2>Key Concepts in Arete</h2>
+      <table>
+        <tr>
+          <th>Concept</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Orchestrator System</td>
+          <td>Controls, enforces, and audits interactions between Nodes</td>
+        </tr>
+        <tr>
+          <td>Constituent System</td>
+          <td>System providing nodes to be orchestrated</td>
+        </tr>
+        <tr>
+          <td>Node</td>
+          <td>Smallest orchestratable service unit in Arete</td>
+        </tr>
+        <tr>
+          <td>Context</td>
+          <td>Defines where capabilities are anchored</td>
+        </tr>
+        <tr>
+          <td>Capability</td>
+          <td>Declares role within a CP (provider/consumer)</td>
+        </tr>
+        <tr>
+          <td>Connection</td>
+          <td>Live interaction channel governed by CP rules</td>
+        </tr>
+        <tr>
+          <td>Connection Profile</td>
+          <td>Open specification of interaction contract</td>
+        </tr>
+      </table>
+    </section>
+    <section>
+      <h2>Example Workflows</h2>
+      <ul>
+        <li>Connecting healthcare, finance, energy, safety with domain-agnostic profiles</li>
+        <li>Enabling digital twins, IoT, API clients, plug-and-play orchestration</li>
+        <li>Standardized onboarding, administration, lifecycle management</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Why Choose Arete?</h2>
+      <p>Arete eliminates technical barriers, enabling connections that are self-describing, intent-driven, context-governed, and ready for innovation across domains.</p>
+      <p>
+        <a href="https://github.com/project-arete">Project Arete on GitHub</a>
+      </p>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 Project Arete. Open source for the community.</p>
+  </footer>
 </body>
 </html>
