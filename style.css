@@ -16,11 +16,11 @@ body {
 
 /* Header Styles */
 header, nav, .header {
-  background-color: #2196f3;
+  background-color: #1077ff;
 }
 
 header {
-    background-color: #2196f3;
+    background-color: #1077ff;
     color: white;
     padding: 1.5rem 2rem;
 }
