@@ -51,26 +51,35 @@ header nav a:hover
 
 /* Hamburger Menu Styles */
 .hamburger {
-    display: none;
-    flex-direction: column;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    z-index: 1000;
-    position: absolute;
-    top: 1.5rem;
-    right: 2rem;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1000;
 }
 
 .hamburger span {
-    width: 28px;
-    height: 3px;
-    background-color: white;
-    margin: 4px 0;
-    transition: all 0.3s ease;
-    border-radius: 3px;
+  display: block;
+  width: 28px;
+  height: 4px;
+  margin: 5px 0;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.4s;
 }
+
+@media (max-width: 600px) {
+  .hamburger { display: flex; }
+  .nav-menu { display: none; }
+  .nav-menu.active { display: flex; flex-direction: column; }
+}
+
 
 .hamburger.active span:nth-child(1) {
     transform: rotate(45deg) translate(8px, 8px);
