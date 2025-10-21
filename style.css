@@ -144,26 +144,6 @@ footer p
     margin-left: auto;
     margin-right: auto;
 }
-
-/* Responsive Navigation - Mobile Styles */
-@media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-    
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 80px;
-        flex-direction: column;
-        background-color: #1077ff;
-        width: 100%;
-        text-align: left;
-        transition: left 0.3s ease;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-        z-index: 999;
-    }
-
 .arete-card {
   border: 1px solid #e0e0e0;
   border-radius: 12px;
@@ -187,6 +167,26 @@ footer p
   color: #333;
   text-align: center;
 }
+
+
+/* Responsive Navigation - Mobile Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 80px;
+        flex-direction: column;
+        background-color: #1077ff;
+        width: 100%;
+        text-align: left;
+        transition: left 0.3s ease;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        z-index: 999;
+    }
 
     .nav-menu.active {
         left: 0;
