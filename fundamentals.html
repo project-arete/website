@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arete Fundamentals</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+</head>
+<body>
+  <header>
+    <h1>Arete Fundamentals</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="primer.html">Primer</a></li>
+        <li><a href="fundamentals.html">Fundamentals</a></li>
+        <li><a href="explore.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Understanding the Core Concepts</h2>
+      <p>This page provides business-audience descriptions of the key fundamentals from Arete's architecture and CNS/CP framework. Each concept is essential to understanding how Arete enables dynamic, secure, and interoperable networks.</p>
+    </section>
+
+    <section>
+      <h2>Node</h2>
+      <p>A Node is the foundational unit of the Arete network. Think of a Node as any device, digital service, or asset that participates in a system—from sensors and gateways to cloud applications and business software. Each Node is capable of representing its unique capabilities and interests to the broader network. By publishing what it can do and in what context, Nodes can interact with others in meaningful, secure, and flexible ways. In practice, Nodes are synchronized across Orchestrator and Constituent Systems, meaning their functionality and relationships are always up to date within a business environment. This enables rapid, adaptable integration without tedious manual configuration or fragile custom code—making business networks much more resilient and agile.</p>
+      <p class="citation">Reference: <a href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_f80474d1-3770-42cf-b737-6ff706709ed8/4952c224-82bc-46d5-adee-ec7e007d9107/Arete-Orchestration.pdf" target="_blank">Arete-Orchestration.pdf</a></p>
+    </section>
+
+    <section>
+      <h2>Context</h2>
+      <p>Context describes the environment or scope in which a Node's capabilities can be applied. It is a grouping inside a Node that might reflect a physical location (such as a building or room), a specific business function, or any other relevant operational domain. Context isn't just a tag; it's the mechanism that ensures business rules and policies are strictly enforced, so that only appropriate connections and activities happen. This way, organizations can confidently orchestrate connections—like HVAC controls only linking to certain floors, or financial systems only connecting under strict regulatory domains—reducing risk and enhancing compliance.</p>
+      <p class="citation">Reference: <a href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_f80474d1-3770-42cf-b737-6ff706709ed8/9fd273bb-5012-4c72-9a7e-30dd7cfeb7a6/Arete-Onboarding.pdf" target="_blank">Arete-Onboarding.pdf</a></p>
+    </section>
+
+    <section>
+      <h2>Capability</h2>
+      <p>A Capability is what a Node offers or needs within a given Context. Capabilities are attached to Contexts, and define precisely what service, data, or action a Node is ready to provide or consume. These might range from sharing sensor data to processing transactions, managing access controls, or automating building services. By declaring Capabilities, organizations streamline interoperability and integration, because every interaction is standardized and governed by clear contracts attached to the right Context—eliminating ambiguity and simplifying scaling.</p>
+      <p class="citation">Reference: <a href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_f80474d1-3770-42cf-b737-6ff706709ed8/34c51118-cb93-4d73-b8e6-1298d67d63d3/Padi-CNSCP-Primer.pdf" target="_blank">Padi-CNSCP-Primer.pdf</a></p>
+    </section>
+
+    <section>
+      <h2>Connection</h2>
+      <p>Connections in Arete are the live, operational links between Nodes, established when compatible Capabilities in a shared Context are identified. Unlike traditional networks based on static addresses, Arete connections are orchestrated dynamically based on the needs and intent of the business at any moment. This not only supports highly responsive and agile operations, but also makes everything instantly auditable, manageable, and secure through built-in policy enforcement and traceability.</p>
+      <p class="citation">Reference: <a href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_f80474d1-3770-42cf-b737-6ff706709ed8/132172d8-7a0a-42bb-bb9e-9dd9843c73de/Arete-Workflow.pdf" target="_blank">Arete-Workflow.pdf</a></p>
+    </section>
+
+    <section>
+      <h2>Connection Profile (CP)</h2>
+      <p>A Connection Profile (CP)—always named as cp:profile.name—is a standardized contract that defines how two Nodes interact over a Connection. Each CP specifies the roles involved (provider and consumer), details the terms of the exchange, and outlines the expectations each Node must fulfill. CPs are domain-agnostic, open-source, and reusable, which greatly simplifies integration between vendors, products, and systems. Businesses benefit from lower costs, easier compliance, and instant plug-and-play interoperability.</p>
+      <p class="citation">Reference: <a href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_f80474d1-3770-42cf-b737-6ff706709ed8/796df892-b890-4054-86ad-a76858ef84a7/A-Vision-for-the-CP-Network.pdf" target="_blank">A-Vision-for-the-CP-Network.pdf</a></p>
+    </section>
+
+    <section>
+      <h2>Role (provider or consumer)</h2>
+      <p>Every Node assumes a role in a Connection Profile: either provider—offering a capability, or consumer—making use of the capability. This division ensures clarity and accountability across the network, allowing organizations to delineate responsibility and access. Importantly, either role can apply to any system, device, or service, reflecting real-world business partnerships and supply chains, with policy defined as needed.</p>
+      <p class="citation">Reference: <a href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_f80474d1-3770-42cf-b737-6ff706709ed8/4952c224-82bc-46d5-adee-ec7e007d9107/Arete-Orchestration.pdf" target="_blank">Arete-Orchestration.pdf</a></p>
+    </section>
+
+    <section>
+      <h2>Orchestrator System</h2>
+      <p>An Orchestrator System is the control center of an Arete Realm. It maintains real-time inventories of Nodes, enforces policies, and brokers Connections by matching compatible Capabilities and Contexts. The Orchestrator automates complex network tasks—such as monitoring, synchronizing, and securing relationships—so businesses spend less time on IT management and more on innovation. Advanced orchestration supports scaling, flexibility, and broad interoperability between diverse systems.</p>
+      <p class="citation">Reference: <a href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_f80474d1-3770-42cf-b737-6ff706709ed8/9fd273bb-5012-4c72-9a7e-30dd7cfeb7a6/Arete-Onboarding.pdf" target="_blank">Arete-Onboarding.pdf</a></p>
+    </section>
+
+    <section>
+      <h2>Constituent System</h2>
+      <p>Constituent Systems contribute Nodes to an Orchestrator, supplying the actual devices, applications, or assets to participate in orchestrated business processes. These might be anything from building equipment, enterprise software, IoT devices, or digital twins. By standardizing how Constituent Systems declare their capabilities and context, Arete ensures seamless integration across vendor boundaries, departments, and operational domains, enabling secure collaboration.</p>
+      <p class="citation">Reference: <a href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_f80474d1-3770-42cf-b737-6ff706709ed8/34c51118-cb93-4d73-b8e6-1298d67d63d3/Padi-CNSCP-Primer.pdf" target="_blank">Padi-CNSCP-Primer.pdf</a></p>
+    </section>
+
+    <section>
+      <h2>Realm</h2>
+      <p>A Realm is a logical grouping of Nodes within an Orchestrator and its connected Constituent Systems. The Realm operates under a defined set of policies, defining which Nodes participate in orchestrated activities together. This abstraction allows organizations to segment their networks according to business needs, regulatory boundaries, geographic location, or any organizational requirement.</p>
+      <p class="citation">Reference: <a href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_f80474d1-3770-42cf-b737-6ff706709ed8/132172d8-7a0a-42bb-bb9e-9dd9843c73de/Arete-Workflow.pdf" target="_blank">Arete-Workflow.pdf</a></p>
+    </section>
+
+    <section>
+      <h2>CP Network</h2>
+      <p>The CP Network is the global overlay that emerges as multiple Realms, orchestrators, and constituent systems interconnect. Instead of relying on the old model of direct address-based connections, the CP Network forms dynamic, policy-driven, secure links using open Connection Profiles. This provides businesses with a scalable, composable foundation for digital transformation—helping them break down silos and unlock innovation using standard, interoperable practices.</p>
+      <p class="citation">Reference: <a href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/collection_f80474d1-3770-42cf-b737-6ff706709ed8/796df892-b890-4054-86ad-a76858ef84a7/A-Vision-for-the-CP-Network.pdf" target="_blank">A-Vision-for-the-CP-Network.pdf</a></p>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 Project Arete. All rights reserved.</p>
+  </footer>
+</body>
+</html>
