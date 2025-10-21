@@ -1,10 +1,12 @@
 /* Reset and Base Styles */
-* {
+* 
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body {
+body 
+{
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
@@ -14,59 +16,108 @@ body {
     font-size: 20px;
 }
 /* Header Styles */
-header, nav, .header {
+header, nav, .header 
+{
   background-color: #1077ff;
 }
-header {
+header 
+{
     background-color: #1077ff;
     color: white;
     padding: 1.5rem 2rem;
+    position: relative;
 }
-header h1 {
+header h1 
+{
     margin-bottom: 1rem;
     font-size: 2rem;
 }
-header nav ul {
+header nav ul 
+{
     list-style: none;
     display: flex;
     gap: 2rem;
 }
-header nav a {
+header nav a 
+{
     color: white;
     text-decoration: none;
     transition: color 0.3s;
 }
-header nav a:hover {
+header nav a:hover 
+{
     color: #3498db;
 }
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1000;
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
 /* Main Content Styles */
-main {
+main 
+{
     flex: 1;
     padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
 }
-main h2 {
+main h2 
+{
     color: #2c3e50;
     margin-bottom: 1rem;
 }
-main p {
+main p 
+{
     margin-bottom: 1rem;
 }
 /* Footer Styles */
-footer {
+footer 
+{
     background-color: #34495e;
     color: white;
     text-align: center;
     padding: 1.5rem 2rem;
     margin-top: auto;
 }
-footer p {
+footer p 
+{
     margin: 0;
 }
 /* Card Styles */
-.card {
+.card 
+{
     background-color: #ffffff;
     border-radius: 16px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -74,16 +125,74 @@ footer p {
     margin-bottom: 1.5rem;
     transition: box-shadow 0.3s ease;
 }
-.card:hover {
+.card:hover 
+{
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
-.card img {
+.card img 
+{
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
 /* Responsive Navigation - Mobile Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 80px;
+        flex-direction: column;
+        background-color: #1077ff;
+        width: 100%;
+        text-align: left;
+        transition: left 0.3s ease;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        z-index: 999;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 1rem 2rem;
+    }
+    
+    .nav-menu li {
+        padding: 0.75rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav-menu li:last-child {
+        border-bottom: none;
+    }
+    
+    header {
+        padding: 1rem;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        padding-right: 50px;
+    }
+    
+    body {
+        font-size: 16px;
+    }
+    
+    main {
+        padding: 1rem;
+    }
+}
+
 @media (max-width: 600px) {
     header {
         padding: 1rem;
@@ -92,12 +201,6 @@ footer p {
     header h1 {
         font-size: 1.5rem;
         margin-bottom: 0.5rem;
-    }
-    
-    header nav ul {
-        flex-direction: column;
-        gap: 0.75rem;
-        align-items: flex-start;
     }
     
     body {
