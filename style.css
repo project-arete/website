@@ -77,3 +77,8 @@ footer p {
 .card:hover {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
+.card img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
