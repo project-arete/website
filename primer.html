@@ -8,19 +8,25 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-  <header>
-    <h1>Project Arete Primer</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="fundamentals.html">Fundamentals</a></li>
-        <li><a href="architecture.html">Architecture</a></li>
-        <li><a href="primer.html">Primer</a></li>
-        <li><a href="explore.html">Resources</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <h1>Project Arete</h1>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <nav class="nav-menu" id="navMenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="fundamentals.html">Fundamentals</a></li>
+      <li><a href="architecture.html">Architecture</a></li>
+      <li><a href="primer.html">Primer</a></li>
+      <li><a href="explore.html">Resources</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
   <main>
     <section>
       <h2>What Is Arete?</h2>
@@ -103,5 +109,14 @@
       </table>
     </section>
   </main>
+  <script>
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('navMenu');
+  hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+</script>
+
 </body>
 </html>
