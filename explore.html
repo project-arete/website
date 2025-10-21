@@ -7,19 +7,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Project Arete Resources</h1>
-        <nav>
-            <ul style="margin-left: 2em;">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="fundamentals.html">Fundamentals</a></li>
-                <li><a href="architecture.html">Architecture</a></li>
-                <li><a href="primer.html">Primer</a></li>
-                <li><a href="explore.html">Resources</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+   <header>
+  <h1>Project Arete</h1>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <nav class="nav-menu" id="navMenu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="fundamentals.html">Fundamentals</a></li>
+      <li><a href="architecture.html">Architecture</a></li>
+      <li><a href="primer.html">Primer</a></li>
+      <li><a href="explore.html">Resources</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
     <main>
         <section class="card-section">
             <div class="card">
@@ -56,5 +62,14 @@
     <footer>
         <p>© 2025 Project Arete</p>
     </footer>
+    <script>
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('navMenu');
+  hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+</script>
+
 </body>
 </html>
