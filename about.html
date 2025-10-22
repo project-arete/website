@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Project Arete</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Project Arete</h1>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="primer.html">Primer</a></li>
+                <li><a href="fundamentals.html">Fundamentals</a></li>
+                <li><a href="architecture.html">Architecture</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cards">
+            <div class="card">
+                <h2>Card 1</h2>
+            </div>
+            <div class="card">
+                <h2>Card 2</h2>
+            </div>
+            <div class="card">
+                <h2>Card 3</h2>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Project Arete. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu');
+
+        hamburger.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
