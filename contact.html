@@ -25,32 +25,36 @@
             </ul>
         </nav>
     </header>
-
     <main>
-        <h1>Contact Us</h1>
-        <section class="contact-info">
-            <h2>Get in Touch</h2>
-            <p>We'd love to hear from you! Please reach out with any questions or inquiries about Project Arete.</p>
-            
-            <div class="contact-details">
-                <p><strong>Email:</strong> <a href="mailto:info@projectarete.io">info@projectarete.io</a></p>
-                <p><strong>Address:</strong> Planet Earth</p>
-            </div>
-
-            <div style="text-align: center; margin-top: 20px;">
-                <img src="Arete-Square-L.png" alt="CNSCP Logo" style="width: 25%; height: auto;">
-            </div>
-        </section>
+        <div class="card">
+            <h1>Contact Us</h1>
+            <section class="contact-info">
+                <h2>Get in Touch</h2>
+                <p>We'd love to hear from you! Please reach out with any questions or inquiries about Project Arete.</p>
+                
+                <div class="contact-details">
+                    <p><strong>Email:</strong> <a href="mailto:info@projectarete.io">info@projectarete.io</a></p>
+                    <p><strong>Address:</strong> Planet Earth</p>
+                </div>
+            </section>
+        </div>
+        
+        <div class="card">
+            <h2>Office Hours</h2>
+            <p>Schedule a meeting with our team to discuss your questions and explore Project Arete further.</p>
+            <a href="https://calendly.com/padiio/ibb" target="_blank" class="office-hours-link">Book Office Hours</a>
+        </div>
+        
+        <div style="text-align: center; margin-top: 20px;">
+            <img src="Arete-Square-L.png" alt="CNSCP Logo" style="width: 25%; height: auto;">
+        </div>
     </main>
-
     <footer>
-        <p>&copy; 2025 Project Arete. All rights reserved.</p>
+        <p>© 2025 Project Arete. All rights reserved.</p>
     </footer>
-
     <script>
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('navMenu');
-
         hamburger.addEventListener('click', function() {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
