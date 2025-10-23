@@ -9,6 +9,6 @@ Content for ProjectArete.io website.
 | **[fundamentals.html](fundamentals.html)** | Core principles of Arete |
 | **[architecture.html](architecture.html)** | Technical & conceptual architecture |
 | **[buildings.html](buildings.html)** | Applications to buildings & environments |
-| **[explore.html](explore.html)** | Interactive exploration & demos |
+| **[explore.html](explore.html)** | Resources page |
 | **[primer.html](primer.html)** | Introductory guide to using Arete |
 | **[contact.html](contact.html)** | Contact details for the team |
