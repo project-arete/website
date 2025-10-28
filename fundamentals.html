@@ -26,7 +26,6 @@
     </ul>
   </nav>
 </header>
-
   <main>
     <section>
       <h1>Understanding Core Arete Concepts</h1>
@@ -34,31 +33,31 @@
       <p>This page aims to clarify the terminology and concepts that are central to Arete, presenting the basics in a way that helps any business leader or technical stakeholder understand how the system works.</p>
     </section>
     <section class="card">
-      <h2>Node</h2>
+      <h2 id="node">🔗 Node</h2>
       <p>A Node is the foundational unit of the Arete network. Think of a Node as any device, digital service, or asset that participates in a system—from sensors and gateways to cloud applications and business software. Each Node is capable of representing its unique capabilities and interests to the broader network. By publishing what it can do and in what context, Nodes can interact with others in meaningful, secure, and flexible ways. In practice, Nodes are synchronized across Orchestrator and Constituent Systems, meaning their functionality and relationships are always up to date within a business environment. This enables rapid, adaptable integration without tedious manual configuration or fragile custom code—making business networks much more resilient and agile.</p>
     </section>
     <section class="card">
-      <h2>Context</h2>
+      <h2 id="context">🔗 Context</h2>
       <p>Context describes the environment or scope in which a Node's capabilities can be applied. It is a grouping inside a Node that might reflect a physical location (such as a building or room), a specific business function, or any other relevant operational domain. Context isn't just a tag; it's the mechanism that ensures business rules and policies are strictly enforced, so that only appropriate connections and activities happen. This way, organizations can confidently orchestrate connections—like HVAC controls only linking to certain floors, or financial systems only connecting under strict regulatory domains—reducing risk and enhancing compliance.</p>
     </section>
     <section class="card">
-      <h2>Capability</h2>
+      <h2 id="capability">🔗 Capability</h2>
       <p>A Capability is what a Node offers or needs within a given Context. Capabilities are attached to Contexts, and define precisely what service, data, or action a Node is ready to provide or consume. These might range from sharing sensor data to processing transactions, managing access controls, or automating building services. By declaring Capabilities, organizations streamline interoperability and integration, because every interaction is standardized and governed by clear contracts attached to the right Context—eliminating ambiguity and simplifying scaling.</p>
     </section>
     <section class="card">
-      <h2>Connection</h2>
+      <h2 id="connection">🔗 Connection</h2>
       <p>Connections in Arete are the live, operational links between Nodes, established when compatible Capabilities in a shared Context are identified. Unlike traditional networks based on static addresses, Arete connections are orchestrated dynamically based on the needs and intent of the business at any moment. This not only supports highly responsive and agile operations, but also makes everything instantly auditable, manageable, and secure through built-in policy enforcement and traceability.</p>
     </section>
     <section class="card">
-      <h2>Connection Profile (CP)</h2>
+      <h2 id="connection-profile-cp">🔗 Connection Profile (CP)</h2>
       <p>A Connection Profile (CP)—always named as cp:profile.name—is a standardized contract that defines how two Nodes interact over a Connection. Each CP specifies the roles involved (provider and consumer), details the terms of the exchange, and outlines the expectations each Node must fulfill. CPs are domain-agnostic, open-source, and reusable, which greatly simplifies integration between vendors, products, and systems. Businesses benefit from lower costs, easier compliance, and instant plug-and-play interoperability.</p>
     </section>
     <section class="card">
-      <h2>Role (provider or consumer)</h2>
+      <h2 id="role-provider-or-consumer">🔗 Role (provider or consumer)</h2>
       <p>Every Node assumes a role in a Connection Profile: either provider—offering a capability, or consumer—making use of the capability. This division ensures clarity and accountability across the network, allowing organizations to delineate responsibility and access. Importantly, either role can apply to any system, device, or service, reflecting real-world business partnerships and supply chains, with policy defined as needed.</p>
     </section>
     <section class="card">
-      <h2>Orchestrator System</h2>
+      <h2 id="orchestrator-system">🔗 Orchestrator System</h2>
       <p>An Orchestrator System is the control center of an Arete Realm. It maintains real-time inventories of Nodes, enforces policies, and brokers Connections by matching compatible Capabilities and Contexts. The Orchestrator automates complex network tasks—such as monitoring, synchronizing, and securing relationships—so businesses spend less time on IT management and more on innovation. Advanced orchestration supports scaling, flexibility, and broad interoperability between diverse systems.</p>
     </section>
   </main>
@@ -69,7 +68,6 @@
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
   });
-</script>
-
+  </script>
 </body>
 </html>
