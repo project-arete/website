@@ -86,12 +86,6 @@ main {
   #menu {
     display: none;
     flex-direction: column;
-    width: 100%;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #1077ff;
-    padding: 1rem 2rem;
   }
   
   #menu.active {
