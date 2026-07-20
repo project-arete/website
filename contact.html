@@ -1,65 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Project Arete</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Project Arete</title>
+  <meta name="description" content="Get in touch with the Project Arete team — email or book an office-hours session.">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Contact Project Arete</h1>
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <nav class="nav-menu" id="navMenu">
-            <ul id="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="fundamentals.html">Concepts</a></li>
-                <li><a href="architecture.html">Architecture</a></li>
-                <li><a href="buildings.html">Buildings</a></li>
-                <li><a href="explore.html">Resources</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
+  <header class="site-header">
+    <div class="bar">
+      <a class="brand" href="index.html"><img src="Arete-Square-L.png" alt="Project Arete logo" /> Project Arete</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="fundamentals.html">Concepts</a></li>
+          <li><a href="architecture.html">Architecture</a></li>
+          <li><a href="buildings.html">Buildings</a></li>
+          <li><a href="explore.html">Resources</a></li>
+          <li><a href="downloads.html">Downloads</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-head">
+      <div class="wrap">
+        <span class="eyebrow">Contact</span>
         <h1>Get Involved with Project Arete</h1>
-        <br>
-        <div class="card">
-            <section class="contact-info">
-                <h2>Get in Touch</h2>
-                <p>We'd love to hear from you! Please reach out with any questions or inquiries about Project Arete.</p>
-                
-                <div class="contact-details">
-                    <p><strong>Email:</strong> <a href="mailto:info@projectarete.io">info@projectarete.io</a></p>
-                    <p><strong>Address:</strong> Planet Earth</p>
-                </div>
-            </section>
-        </div>
-        
-        <div class="card">
-            <h2>Office Hours</h2>
+        <p>We&rsquo;d love to hear from you &mdash; questions, ideas, or exploring how Arete fits your organization.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="tiles two">
+          <div class="tile">
+            <span class="t-icon">&#9993;&#65039;</span>
+            <h3>Get in Touch</h3>
+            <p>Reach out with any questions or inquiries about Project Arete.</p>
+            <div class="t-links"><a href="mailto:info@projectarete.io">info@projectarete.io</a></div>
+          </div>
+          <div class="tile">
+            <span class="t-icon">&#128197;</span>
+            <h3>Office Hours</h3>
             <p>Schedule a meeting with our team to discuss your questions and explore Project Arete further.</p>
-            <a href="https://calendly.com/padiio/ibb" target="_blank" class="office-hours-link">Book Office Hours</a>
+            <div class="t-links"><a href="https://calendly.com/padiio/ibb">Book Office Hours</a></div>
+          </div>
         </div>
-        
-        <div style="text-align: center; margin-top: 20px;">
-            <img src="Arete-Square-L.png" alt="CNSCP Logo" style="width: 25%; height: auto;">
+        <div class="card">
+          <h2>On GitHub</h2>
+          <p>Project Arete is developed in the open. Visit the <a href="https://github.com/project-arete">project-arete organization</a> for the SDK, applications, widget library, Helm charts, and this website&rsquo;s source.</p>
         </div>
-    </main>
-    <footer>
-        <p>&copy; 2025 Project Arete. All rights reserved.</p>
-    </footer>
-    <script>
-        const hamburger = document.getElementById('hamburger');
-        const menu = document.getElementById('menu');
-        
-        hamburger.addEventListener('click', () => {
-            menu.classList.toggle('active');
-        });
-    </script>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="cols">
+      <div class="about">
+        <div class="f-brand"><img src="Arete-Square-L.png" alt="" /> Project Arete</div>
+        <p>Governed connectivity for systems, devices, and AI agents — orchestrating digital assets into context-driven, composable networks through open CNS/CP Connection Profiles.</p>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="fundamentals.html">Concepts</a></li>
+          <li><a href="architecture.html">Architecture</a></li>
+          <li><a href="buildings.html">Smart Buildings</a></li>
+          <li><a href="primer.html">Primer</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Build</h4>
+        <ul>
+          <li><a href="downloads.html">Downloads</a></li>
+          <li><a href="https://github.com/project-arete/sdk">Arete SDK</a></li>
+          <li><a href="https://github.com/project-arete/arete-monitor">Arete Monitor</a></li>
+          <li><a href="https://github.com/project-arete/arete-widget">Arete Widget</a></li>
+          <li><a href="https://project-arete.github.io/widget-library/">Widget Library</a></li>
+          <li><a href="https://cp.padi.io">CP Registry</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Run &amp; Connect</h4>
+        <ul>
+          <li><a href="https://aretehosting.com">Arete Hosting</a></li>
+          <li><a href="https://github.com/project-arete">GitHub Organization</a></li>
+          <li><a href="https://calendly.com/padiio/ibb">Office Hours</a></li>
+          <li><a href="mailto:info@projectarete.io">info@projectarete.io</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="tail">
+      <span>&copy; 2026 Project Arete. All rights reserved.</span>
+      <span>Built on open CNS/CP specifications.</span>
+    </div>
+  </footer>
+  <script>
+    const hb = document.getElementById('hamburger');
+    const nav = document.getElementById('siteNav');
+    hb.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      hb.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  </script>
 </body>
 </html>

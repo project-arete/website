@@ -3,125 +3,129 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project Arete Primer</title>
+  <title>Primer — Project Arete</title>
+  <meta name="description" content="A one-page introduction to the Arete architecture, how it works, and its value proposition.">
+  <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-<header>
-  <h1>Project Arete</h1>
-  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-  <nav class="nav-menu" id="navMenu">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="fundamentals.html">Fundamentals</a></li>
-      <li><a href="architecture.html">Architecture</a></li>
-      <li><a href="buildings.html" class="active">Buildings</a></li>
-      <li><a href="explore.html">Resources</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
+  <header class="site-header">
+    <div class="bar">
+      <a class="brand" href="index.html"><img src="Arete-Square-L.png" alt="Project Arete logo" /> Project Arete</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="fundamentals.html">Concepts</a></li>
+          <li><a href="architecture.html">Architecture</a></li>
+          <li><a href="buildings.html">Buildings</a></li>
+          <li><a href="explore.html">Resources</a></li>
+          <li><a href="downloads.html">Downloads</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
   <main>
-    <section>
-      <h2>What Is Arete?</h2>
-      <p>Arete is an open, interoperable architecture that transforms connectivity from address-based models to role- and context-based orchestration of distributed digital systems. It brings the CP Network vision to life, focusing on coordination, security, and composability through standardized Connection Profiles.</p>
+    <section class="page-head">
+      <div class="wrap">
+        <span class="eyebrow">Primer</span>
+        <h1>Project Arete Primer</h1>
+        <p>A short introduction for readers who want the whole picture on one page.</p>
+      </div>
     </section>
-    <section>
-      <h2>Core Architecture</h2>
-      <ul style="margin-left: 2em;">
-        <li><strong>Orchestrator Systems:</strong> control plane for brokering policies</li>
-        <li><strong>Constituent Systems:</strong> contribute Nodes (devices, assets, services)</li>
-        <li><strong>Nodes:</strong> atomic units with declared roles and capabilities</li>
-        <li><strong>Connection Profiles (CPs):</strong> contracts specifying role, terms, and properties</li>
-        <li><strong>Contexts:</strong> group capabilities for semantic interoperability</li>
-      </ul>
-    </section>
-    <section>
-      <h2>How Arete Works</h2>
-      <ul style="margin-left: 2em;">
-        <li>Orchestrators maintain inventory of Nodes</li>
-        <li>Contexts matched for orchestration</li>
-        <li>Capabilities paired through CPs</li>
-        <li>Continuous audit and governance; zero-trust models</li>
-      </ul>
-      <p></p>
-      <div>
-        <h2 style="margin-left: 2em;">Example Use Case: Single Building</h2>
-        <img src="Arete-building.png" alt="Arete Building" style="max-width:100%; margin:2em 0;">
-        <p>Arete acts as the building's single source of truth for operations, linking HVAC, lighting, security, BIM, CMMS, etc. It demonstrates plug-and-play interoperability and a trusted data fabric for all stakeholders.</p>
-     </div> 
-    </section>
-    <section>
-      <h2>Value Proposition</h2>
-      <ul style="margin-left: 2em;">
-        <li><strong>Interoperability:</strong> connects siloed systems, enabling new models</li>
-        <li><strong>Security:</strong> role- and context-based, full auditability</li>
-        <li><strong>Composability:</strong> create and combine services without complex integration</li>
-        <li><strong>Governance:</strong> adaptable control, distributed authorities</li>
-        <li><strong>Openness:</strong> open-source, standards-driven, reduced lock-in</li>
-      </ul>
-      <div>
-        <h2 style="margin-left: 2em;">Example Use Case: Fleet of Buildings</h2>
-        <img src="Arete-fleet.png" alt="Arete Fleet" style="max-width:100%; margin:2em 0;">
-        <p>Arete scales from buildings to cities, supporting distributed governance and scalable asset coordination for portfolios, campuses, and smart cities.</p>
-      </div> 
-    </section>
-    <section>
-      <h2>Key Concepts in Arete</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Term</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>Orchestrator System</td>
-          <td>Controls, enforces, and audits interactions between Nodes</td>
-        </tr>
-        <tr>
-          <td>Constituent System</td>
-          <td>Owner of Nodes and contributor to orchestration</td>
-        </tr>
-        <tr>
-          <td>Node</td>
-          <td>Smallest unit with roles and capabilities</td>
-        </tr>
-        <tr>
-          <td>Connection Profile (CP)</td>
-          <td>Open-source specs that describe roles and capabilities</td>
-        </tr>
-        <tr>
-          <td>Context</td>
-          <td>Defined scope for interaction policies</td>
-        </tr>
-        <tr>
-          <td>Role</td>
-          <td>Provider or consumer of capabilities</td>
-        </tr>
-        <tr>
-          <td>Capability</td>
-          <td>Specific function or action a Node offers</td>
-        </tr>
-        </tbody>
-      </table>
+
+    <section class="section prose">
+      <div class="wrap">
+        <div class="card">
+          <h2>What Is Arete?</h2>
+          <p>Arete is an open, interoperable architecture that transforms connectivity from address-based models to role- and context-based orchestration of distributed digital systems. It is the practical realization of the <a href="https://drive.google.com/file/d/1MNuPTeS1AfTaix9b8P17mo-20pKeE57w/view?usp=sharing">CP Network vision</a>, focusing on coordination, security, and composability through standardized Connection Profiles licensed openly via GitHub.</p>
+        </div>
+
+        <div class="card">
+          <h2>Core Architecture</h2>
+          <ul>
+            <li><strong>Orchestrator Systems</strong> &mdash; the control plane, brokering and enforcing policies across constituent domains.</li>
+            <li><strong>Constituent Systems</strong> &mdash; contribute Nodes: devices, digital assets, services, and other resources ready to be orchestrated.</li>
+            <li><strong>Nodes</strong> &mdash; atomic units, each declaring roles and capabilities, synchronized between orchestrators and their original systems.</li>
+            <li><strong>Connection Profiles (CPs)</strong> &mdash; contracts specifying role, terms, and properties of every interaction.</li>
+            <li><strong>Contexts</strong> &mdash; group capabilities for semantic interoperability.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>How Arete Works</h2>
+          <ul>
+            <li>Orchestrators maintain a synchronized inventory of Nodes.</li>
+            <li>Contexts are matched for orchestration.</li>
+            <li>Capabilities are paired through Connection Profiles.</li>
+            <li>Connections are continuously audited and governed under zero-trust models.</li>
+          </ul>
+          <p><strong>Example &mdash; a single building:</strong> Arete acts as the building&rsquo;s single source of truth for operations, linking HVAC, lighting, security, BIM, CMMS, and more &mdash; plug-and-play interoperability and a trusted data fabric for every stakeholder.</p>
+        </div>
+
+        <div class="card">
+          <h2>Value Proposition</h2>
+          <ul>
+            <li><strong>Interoperability</strong> &mdash; connects siloed systems, enabling new operating models.</li>
+            <li><strong>Security</strong> &mdash; role- and context-based, with full auditability.</li>
+            <li><strong>Composability</strong> &mdash; create and combine services without complex integration projects.</li>
+          </ul>
+          <p>Continue with the <a href="fundamentals.html">core concepts</a>, see the <a href="architecture.html">architecture</a> in three steps, or <a href="explore.html">get your hands on the tools</a>.</p>
+        </div>
+      </div>
     </section>
   </main>
+  <footer class="site-footer">
+    <div class="cols">
+      <div class="about">
+        <div class="f-brand"><img src="Arete-Square-L.png" alt="" /> Project Arete</div>
+        <p>Governed connectivity for systems, devices, and AI agents — orchestrating digital assets into context-driven, composable networks through open CNS/CP Connection Profiles.</p>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="fundamentals.html">Concepts</a></li>
+          <li><a href="architecture.html">Architecture</a></li>
+          <li><a href="buildings.html">Smart Buildings</a></li>
+          <li><a href="primer.html">Primer</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Build</h4>
+        <ul>
+          <li><a href="downloads.html">Downloads</a></li>
+          <li><a href="https://github.com/project-arete/sdk">Arete SDK</a></li>
+          <li><a href="https://github.com/project-arete/arete-monitor">Arete Monitor</a></li>
+          <li><a href="https://github.com/project-arete/arete-widget">Arete Widget</a></li>
+          <li><a href="https://project-arete.github.io/widget-library/">Widget Library</a></li>
+          <li><a href="https://cp.padi.io">CP Registry</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Run &amp; Connect</h4>
+        <ul>
+          <li><a href="https://aretehosting.com">Arete Hosting</a></li>
+          <li><a href="https://github.com/project-arete">GitHub Organization</a></li>
+          <li><a href="https://calendly.com/padiio/ibb">Office Hours</a></li>
+          <li><a href="mailto:info@projectarete.io">info@projectarete.io</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="tail">
+      <span>&copy; 2026 Project Arete. All rights reserved.</span>
+      <span>Built on open CNS/CP specifications.</span>
+    </div>
+  </footer>
   <script>
-  const hamburger = document.getElementById('hamburger');
-  const navMenu = document.getElementById('navMenu');
-  hamburger.addEventListener('click', function() {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-  });
-</script>
-
+    const hb = document.getElementById('hamburger');
+    const nav = document.getElementById('siteNav');
+    hb.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      hb.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  </script>
 </body>
 </html>

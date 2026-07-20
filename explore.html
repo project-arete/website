@@ -1,78 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resources - Project Arete</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources — Project Arete</title>
+  <meta name="description" content="Hosted realms, desktop apps, SDKs, the CP registry, and Arete AI resources.">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-  <h1>Project Arete</h1>
-  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-  <nav class="nav-menu" id="navMenu">
-    <ul id="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="fundamentals.html">Concepts</a></li>
-      <li><a href="architecture.html">Architecture</a></li>
-      <li><a href="buildings.html">Buildings</a></li>
-      <li><a href="explore.html" class="active">Resources</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <header class="site-header">
+    <div class="bar">
+      <a class="brand" href="index.html"><img src="Arete-Square-L.png" alt="Project Arete logo" /> Project Arete</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="fundamentals.html">Concepts</a></li>
+          <li><a href="architecture.html">Architecture</a></li>
+          <li><a href="buildings.html">Buildings</a></li>
+          <li><a href="explore.html" class="active">Resources</a></li>
+          <li><a href="downloads.html">Downloads</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-    <main>
-        <section class="card-section">
-            <div class="card">
-                <h2>Arete AI Resources</h2>
-                <p>This Arete AI (created using Perplexity.ai) may help you better understand Arete and CNS/CP. But like all AI LLMs, please consider how you rely on its responses.</p>
-                <ul style="margin-left: 2em;">
-                    <li><a href="http://arete.bot/" target="_blank">Explore Arete.bot</a></li>
-                    <li><a href="https://www.perplexity.ai/page/cns-cp-mathematical-modeling-p-5IfyQ_vLTpSETh9gWjsQbQ" target="_blank">Arete/CNS/CP Mathematical Modeling</a></li>
-                    <li><a href="https://www.perplexity.ai/page/arete-in-operational-technolog-YoywN2TAQB.NeRvXmOytYA#0" target="_blank">Arete in Operational Technology</a></li>
-                    <li><a href="https://www.perplexity.ai/page/how-does-arete-enforce-zero-tr-4WRGqpFnTKyrSd4QnCVQNg#0" target="_blank">How does Arete enforce Zero Trust?</a></li>
-                </ul>
-                <p>This Arete AI is experimental - Be careful how you use its responses.</p>
-            </div>
-        </section>
-        <section class="card-section">
-            <div class="card">
-                <h2>Development Resources</h2>
-                <p>Resources for developers wanting to learn and implement Arete components.</p>
-                <ul style="margin-left: 2em;">
-                    <li>Node.js Arete SDK <a href="https://github.com/project-arete/sdk/tree/main/nodejs" target="_blank">on GitHub</a></li>
-                    <li>Python Arete SDK <a href="https://github.com/project-arete/sdk/tree/main/python" target="_blank">on GitHub</a></li>
-                    <li>Rust Arete SDK <a href="https://github.com/project-arete/sdk/tree/main/rust" target="_blank">on GitHub</a></li>
-                    <li>Lua Arete SDK <a href="https://gitlab.com/megalithic-llc/mlua-arete-sdk" target="_blank">on Megalithic GitLab</a></li>
-                </ul>
-                <br>
-                <p>More about the CNS/CP the core technology within Project Arete.</p>
-                <ul style="margin-left: 2em;">
-                    <li><a href="https://cnscp.io" target="_blank">CNS/CP Official Website</a></li>
-                    <li>CNS/CP <a href="https://cns.dev" target="_blank">on GitHub</a></li>
-                </ul>
-            </div>
-            <div class="card">
-                <h2>Office Hours</h2>
-                <p>Schedule a meeting with our team to discuss your questions and explore Project Arete further.</p>
-                <a href="https://calendly.com/padiio/ibb" target="_blank" class="office-hours-link">Book Office Hours</a>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Project Arete. All rights reserved.</p>
-    </footer>
-    <script>
-        const hamburger = document.getElementById('hamburger');
-        const menu = document.getElementById('menu');
-        
-        hamburger.addEventListener('click', () => {
-            menu.classList.toggle('active');
-        });
-    </script>
+  <main>
+    <section class="page-head">
+      <div class="wrap">
+        <span class="eyebrow">Resources</span>
+        <h1>Explore, Build, and Run Arete</h1>
+        <p>Everything you need to try Arete today: hosted realms, desktop apps, SDKs in four languages, the CP registry, and people to talk to.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <h2>Get a live realm</h2>
+        <div class="card">
+          <p><a href="https://aretehosting.com"><strong>Arete Hosting</strong></a> gives you your own Arete instance in a few clicks: sign in, click <em>Add orchestrator</em>, pick a name &mdash; and you get a ready-to-run orchestrator at <span class="mono">&lt;name&gt;.aretehosting.com</span>, deployed from the official Helm chart, with credentials to hand to your apps and users.</p>
+          <p><strong>Arete Hosting is free to use right now.</strong> Down the road it will carry a fee &mdash; orchestrators take real compute to operate &mdash; so early experimenting is a good deal. Prefer to run things yourself? The same software lives in the <a href="https://github.com/project-arete/aretehosting">aretehosting</a> repo, deployable with Docker Compose or Kubernetes, alongside the <a href="https://github.com/project-arete/helm-charts">Helm charts</a>.</p>
+        </div>
+
+        <h2>Applications</h2>
+        <div class="tiles">
+          <div class="tile">
+            <span class="t-icon">&#128202;</span>
+            <h3>Arete Monitor</h3>
+            <p>A live dashboard for CNS/CP realms &mdash; systems, contexts, connections, and a realm graph, updating in real time.</p>
+            <div class="t-links"><a href="downloads.html">Downloads</a> <a href="https://github.com/project-arete/arete-monitor">GitHub</a></div>
+          </div>
+          <div class="tile">
+            <span class="t-icon">&#128161;</span>
+            <h3>Arete Widget</h3>
+            <p>Describe a device as a YAML widget &mdash; CP capabilities plus a faceplate &mdash; and it becomes a governed node with a live control panel. Ideal for prototyping contracts without hardware.</p>
+            <div class="t-links"><a href="downloads.html">Downloads</a> <a href="https://github.com/project-arete/arete-widget">GitHub</a></div>
+          </div>
+          <div class="tile">
+            <span class="t-icon">&#128218;</span>
+            <h3>Widget Library</h3>
+            <p>The online catalog of community-extensible widget definitions, validated against the CP registry and loaded by Arete Widget at runtime.</p>
+            <div class="t-links"><a href="https://project-arete.github.io/widget-library/">Catalog</a> <a href="https://github.com/project-arete/widget-library">GitHub</a></div>
+          </div>
+        </div>
+
+        <h2>Developer SDKs</h2>
+        <div class="tiles">
+          <div class="tile">
+            <h3>Node.js</h3>
+            <p>The Arete SDK for JavaScript and Electron apps. Available on npm as <span class="mono">arete-sdk</span>.</p>
+            <div class="t-links"><a href="https://github.com/project-arete/sdk/tree/main/nodejs">GitHub</a></div>
+          </div>
+          <div class="tile">
+            <h3>Python</h3>
+            <p>The Arete SDK for Python services, tooling, and automation.</p>
+            <div class="t-links"><a href="https://github.com/project-arete/sdk/tree/main/python">GitHub</a></div>
+          </div>
+          <div class="tile">
+            <h3>Rust</h3>
+            <p>The Arete SDK for high-performance and embedded work.</p>
+            <div class="t-links"><a href="https://github.com/project-arete/sdk/tree/main/rust">GitHub</a></div>
+          </div>
+        </div>
+        <p style="margin-top:-6px;">Community binding: a <a href="https://gitlab.com/megalithic-llc/mlua-arete-sdk">Lua SDK</a> is maintained by Megalithic on GitLab.</p>
+
+        <h2 style="margin-top:34px;">CNS/CP &mdash; the core technology</h2>
+        <div class="tiles">
+          <div class="tile">
+            <h3>CNS/CP Website</h3>
+            <p>The Connectivity Naming System and Connection Profiles &mdash; the open specifications Arete implements.</p>
+            <div class="t-links"><a href="https://cnscp.io">cnscp.io</a> <a href="https://github.com/cnscp">GitHub</a></div>
+          </div>
+          <div class="tile">
+            <h3>CP Registry</h3>
+            <p>The central registry of governed Connection Profiles. Browse profiles like <span class="mono">padi.light</span> before authoring your own.</p>
+            <div class="t-links"><a href="https://cp.padi.io">cp.padi.io</a></div>
+          </div>
+          <div class="tile">
+            <h3>CNS Developer Site</h3>
+            <p>Developer materials and hosted test infrastructure for CNS.</p>
+            <div class="t-links"><a href="https://cns.dev">cns.dev</a></div>
+          </div>
+        </div>
+
+        <h2 style="margin-top:34px;">Arete AI</h2>
+        <div class="callout warn">
+          <p>These AI resources (created with Perplexity.ai) may help you understand Arete and CNS/CP &mdash; but like all LLM output, consider carefully how you rely on their responses. They are experimental.</p>
+        </div>
+        <div class="tiles two">
+          <div class="tile">
+            <h3>Arete.bot</h3>
+            <p>An experimental conversational guide to Arete and CNS/CP.</p>
+            <div class="t-links"><a href="http://arete.bot/">arete.bot</a></div>
+          </div>
+          <div class="tile">
+            <h3>Deep dives</h3>
+            <p><a href="https://www.perplexity.ai/page/cns-cp-mathematical-modeling-p-5IfyQ_vLTpSETh9gWjsQbQ">Mathematical modeling of Arete/CNS/CP</a><br>
+               <a href="https://www.perplexity.ai/page/arete-in-operational-technolog-YoywN2TAQB.NeRvXmOytYA#0">Arete in operational technology</a><br>
+               <a href="https://www.perplexity.ai/page/how-does-arete-enforce-zero-tr-4WRGqpFnTKyrSd4QnCVQNg#0">How Arete enforces zero trust</a></p>
+          </div>
+        </div>
+
+        <div class="cta-band">
+          <h2>Talk it through with us</h2>
+          <p>Schedule an office-hours session to discuss your questions and explore Project Arete further &mdash; or start with the <a style="color:#fff; text-decoration:underline;" href="primer.html">primer</a>.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://calendly.com/padiio/ibb">Book Office Hours</a>
+            <a class="btn btn-ghost" href="primer.html">Read the Primer</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="cols">
+      <div class="about">
+        <div class="f-brand"><img src="Arete-Square-L.png" alt="" /> Project Arete</div>
+        <p>Governed connectivity for systems, devices, and AI agents — orchestrating digital assets into context-driven, composable networks through open CNS/CP Connection Profiles.</p>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="fundamentals.html">Concepts</a></li>
+          <li><a href="architecture.html">Architecture</a></li>
+          <li><a href="buildings.html">Smart Buildings</a></li>
+          <li><a href="primer.html">Primer</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Build</h4>
+        <ul>
+          <li><a href="downloads.html">Downloads</a></li>
+          <li><a href="https://github.com/project-arete/sdk">Arete SDK</a></li>
+          <li><a href="https://github.com/project-arete/arete-monitor">Arete Monitor</a></li>
+          <li><a href="https://github.com/project-arete/arete-widget">Arete Widget</a></li>
+          <li><a href="https://project-arete.github.io/widget-library/">Widget Library</a></li>
+          <li><a href="https://cp.padi.io">CP Registry</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Run &amp; Connect</h4>
+        <ul>
+          <li><a href="https://aretehosting.com">Arete Hosting</a></li>
+          <li><a href="https://github.com/project-arete">GitHub Organization</a></li>
+          <li><a href="https://calendly.com/padiio/ibb">Office Hours</a></li>
+          <li><a href="mailto:info@projectarete.io">info@projectarete.io</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="tail">
+      <span>&copy; 2026 Project Arete. All rights reserved.</span>
+      <span>Built on open CNS/CP specifications.</span>
+    </div>
+  </footer>
+  <script>
+    const hb = document.getElementById('hamburger');
+    const nav = document.getElementById('siteNav');
+    hb.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      hb.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  </script>
 </body>
 </html>

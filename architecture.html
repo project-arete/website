@@ -1,70 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Architecture - Project Arete</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Architecture — Project Arete</title>
+  <meta name="description" content="How an Arete realm comes together: gathering nodes, matching contexts, and binding capabilities through Connection Profiles.">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Arete Architecture</h1>
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <nav class="nav-menu" id="navMenu">
-            <ul id="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="fundamentals.html">Concepts</a></li>
-                <li><a href="architecture.html" class="active">Architecture</a></li>
-                <li><a href="buildings.html">Buildings</a></li>
-                <li><a href="explore.html">Resources</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="hero">
-            <h1>Architecture</h1>
-            <p>The Arete orchestration process provides a practical framework for securely connecting systems across diverse domains by leveraging a standardized, context-driven approach.</p>
-            <p>At the heart of Arete are three key steps that bring order and clarity to the complexity of interoperable networks: the gathering of nodes within defined contexts, the careful matching of those contexts, and the binding of capabilities using standardized Connection Profiles.</p>
-            <p>These steps ensure robust, policy-driven integration, making collaboration across systems both secure and dynamic. Below, each step will be described in detail to illustrate the Arete approach.</p>
-        </section>
-        <section class="process-steps">
-            <div class="card">
-                <h2>Step 1: Gathering Nodes</h2>
-                <img src="Step1-Gathering Nodes.png" alt="Gathering Nodes" style="display: block; margin-left: auto; margin-right: auto; width: 75%; height: auto;" />
-                <p>The orchestrator collects all Nodes (atomic systems or services) within its Realm, relying on the onboarding twinning process of Nodes from Constituent Systems. This builds a synchronized inventory of Twins of the Nodes that can be filtered or grouped by origin or attributes required for matching Context and Binding Capabilities.</p>
-                <p>Both the Orchestrator and Constituent systems in an Arete Realm are IP-connected. They may reside on the public Internet or within a private IP network. This flexible deployment allows for secure orchestration across diverse environments, ensuring that each system's Nodes participate in workflows and connections regardless of underlying network boundaries or transport. The Orchestrator maintains a synchronized inventory of Nodes from Constituent Systems no matter where they are hosted, supporting policy-driven coordination across both cloud and on-premises contexts</p>
-            </div>
-            <div class="card">
-                <h2>Step 2: Matching Contexts</h2>
-                <img src="Step2-MatchingContexts.png" alt="Matching Contexts" style="display: block; margin-left: auto; margin-right: auto; width: 75%; height: auto;" />
-                <p>In Arete, Context is the organizing principle that allows nodes to be grouped and matched for secure interaction. A context can represent a physical space, such as a building, a room, or a piece of equipment. Equally, contexts may be virtual—defining contracts, leases, or tickets within digital or business processes. Finally, contexts can be derived semantically, using rich models like knowledge graphs that capture the meaning and relationships between different entities.</p>
-                <p>This flexible approach means Arete can orchestrate interactions not only by location or asset, but by contracts, service processes, or even abstract concepts described by shared semantics.</p>
-            </div>
-            <div class="card">
-                <h2>Step 3: Binding Capabilities</h2>
-                <img src="Step3-BindingCapabilities.png" alt="Binding Capabilities" style="display: block; margin-left: auto; margin-right: auto; width: 75%; height: auto;" />
-                <p>Once Contexts match, the orchestrator analyzes each Node's Capabilities—each described using a standardized Connection Profile (CP). Providers are paired with Consumers, and valid matches result in an enforceable, policy-driven connection instance.</p>
-            </div>
-            <p>Because Project Arete is designed around dynamic orchestration, Nodes and their Contexts can continuously evolve. As the needs of assets or systems change over time, new Capabilities may be added, removed, or adapted without requiring changes to the underlying network or other elements outside the orchestrated Realm.</p>
-            <p>This enables a truly adaptive and resilient environment in which each Node can participate in a variety of contexts and offer multiple capabilities as its operational lifecycle unfolds.</p>
-            <p>This flexibility ensures that Arete can meet both immediate and future integration challenges, reflecting how assets, services, and systems naturally change and grow.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Project Arete. All rights reserved.</p>
-    </footer>
-    <script>
-        const hamburger = document.getElementById('hamburger');
-        const menu = document.getElementById('menu');
-        
-        hamburger.addEventListener('click', () => {
-            menu.classList.toggle('active');
-        });
-    </script>
+  <header class="site-header">
+    <div class="bar">
+      <a class="brand" href="index.html"><img src="Arete-Square-L.png" alt="Project Arete logo" /> Project Arete</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="fundamentals.html">Concepts</a></li>
+          <li><a href="architecture.html" class="active">Architecture</a></li>
+          <li><a href="buildings.html">Buildings</a></li>
+          <li><a href="explore.html">Resources</a></li>
+          <li><a href="downloads.html">Downloads</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-head">
+      <div class="wrap">
+        <span class="eyebrow">Architecture</span>
+        <h1>How an Arete Realm Comes Together</h1>
+        <p>The Arete orchestration process is a practical framework for securely connecting systems across diverse domains. Three steps bring order to interoperability: gathering nodes within defined contexts, matching those contexts, and binding capabilities through standardized Connection Profiles.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="card card-split">
+          <div class="card-media"><img src="Step1-GatheringNodes.png" alt="Step 1 — gathering nodes into the orchestrator"></div>
+          <div class="card-content">
+            <h2>Step 1: Gathering Nodes</h2>
+            <p>The orchestrator collects all Nodes within its Realm through the onboarding <em>twinning</em> process from Constituent Systems, building a synchronized inventory of Node twins that can be filtered or grouped by origin and attributes.</p>
+            <p>Orchestrator and Constituent Systems are IP-connected &mdash; on the public Internet or within private networks. The orchestrator maintains its synchronized inventory wherever systems are hosted, supporting policy-driven coordination across cloud and on-premises environments alike.</p>
+          </div>
+        </div>
+
+        <div class="card card-split flip">
+          <div class="card-media"><img src="Step2-MatchingContexts.png" alt="Step 2 — matching contexts"></div>
+          <div class="card-content">
+            <h2>Step 2: Matching Contexts</h2>
+            <p>Context is the organizing principle that groups nodes for secure interaction. A context can be physical &mdash; a building, a room, a piece of equipment. It can be virtual &mdash; a contract, a lease, a ticket in a business process. And it can be semantic, derived from rich models like knowledge graphs.</p>
+            <p>Arete therefore orchestrates interactions not only by location or asset, but by contracts, service processes, or shared meaning.</p>
+          </div>
+        </div>
+
+        <div class="card card-split">
+          <div class="card-media"><img src="Step3-BindingCapabilities.png" alt="Step 3 — binding capabilities"></div>
+          <div class="card-content">
+            <h2>Step 3: Binding Capabilities</h2>
+            <p>Once Contexts match, the orchestrator analyzes each Node&rsquo;s Capabilities &mdash; each described by a standardized Connection Profile. Providers are paired with Consumers, and every valid match becomes an enforceable, policy-driven connection instance.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Built to evolve</h2>
+          <p>Because Arete is designed around dynamic orchestration, Nodes and their Contexts continuously evolve. Capabilities can be added, removed, or adapted without changing the underlying network or anything outside the orchestrated Realm.</p>
+          <p>Each Node can participate in many contexts and offer multiple capabilities across its operational lifecycle &mdash; a genuinely adaptive environment that meets both immediate and future integration needs, reflecting how assets, services, and systems naturally change and grow.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="cols">
+      <div class="about">
+        <div class="f-brand"><img src="Arete-Square-L.png" alt="" /> Project Arete</div>
+        <p>Governed connectivity for systems, devices, and AI agents — orchestrating digital assets into context-driven, composable networks through open CNS/CP Connection Profiles.</p>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="fundamentals.html">Concepts</a></li>
+          <li><a href="architecture.html">Architecture</a></li>
+          <li><a href="buildings.html">Smart Buildings</a></li>
+          <li><a href="primer.html">Primer</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Build</h4>
+        <ul>
+          <li><a href="downloads.html">Downloads</a></li>
+          <li><a href="https://github.com/project-arete/sdk">Arete SDK</a></li>
+          <li><a href="https://github.com/project-arete/arete-monitor">Arete Monitor</a></li>
+          <li><a href="https://github.com/project-arete/arete-widget">Arete Widget</a></li>
+          <li><a href="https://project-arete.github.io/widget-library/">Widget Library</a></li>
+          <li><a href="https://cp.padi.io">CP Registry</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Run &amp; Connect</h4>
+        <ul>
+          <li><a href="https://aretehosting.com">Arete Hosting</a></li>
+          <li><a href="https://github.com/project-arete">GitHub Organization</a></li>
+          <li><a href="https://calendly.com/padiio/ibb">Office Hours</a></li>
+          <li><a href="mailto:info@projectarete.io">info@projectarete.io</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="tail">
+      <span>&copy; 2026 Project Arete. All rights reserved.</span>
+      <span>Built on open CNS/CP specifications.</span>
+    </div>
+  </footer>
+  <script>
+    const hb = document.getElementById('hamburger');
+    const nav = document.getElementById('siteNav');
+    hb.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      hb.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  </script>
 </body>
 </html>

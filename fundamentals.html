@@ -1,73 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arete Fundamentals</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concepts — Project Arete</title>
+  <meta name="description" content="The core Arete concepts: Node, Context, Capability, Connection, Connection Profile, Role, and Orchestrator System.">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>Arete Concepts</h1>
-  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-  <nav class="nav-menu" id="navMenu">
-    <ul id="menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="fundamentals.html">Concepts</a></li>
-      <li><a href="architecture.html">Architecture</a></li>
-      <li><a href="buildings.html" class="active">Buildings</a></li>
-      <li><a href="explore.html">Resources</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <header class="site-header">
+    <div class="bar">
+      <a class="brand" href="index.html"><img src="Arete-Square-L.png" alt="Project Arete logo" /> Project Arete</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="fundamentals.html" class="active">Concepts</a></li>
+          <li><a href="architecture.html">Architecture</a></li>
+          <li><a href="buildings.html">Buildings</a></li>
+          <li><a href="explore.html">Resources</a></li>
+          <li><a href="downloads.html">Downloads</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
   <main>
-    <section>
-      <h1>Understanding Core Arete Concepts</h1>
-      <p>Arete organizes networks by focusing on nodes, context, and capabilities, providing a structured foundation for systems to work together securely and efficiently. Instead of building connections based on technical addresses, Arete emphasizes business roles and real-world relationships. Its architecture helps organizations define and manage how technology assets interact, keeping things organized, traceable, and easy to adapt as needs change.</p>
-      <p>This page aims to clarify the terminology and concepts that are central to Arete, presenting the basics in a way that helps any business leader or technical stakeholder understand how the system works.</p>
+    <section class="page-head">
+      <div class="wrap">
+        <span class="eyebrow">Concepts</span>
+        <h1>Understanding Core Arete Concepts</h1>
+        <p>Arete organizes networks around nodes, context, and capabilities &mdash; business roles and real-world relationships instead of technical addresses. This page defines the terms that carry the architecture, for business leaders and technical stakeholders alike.</p>
+      </div>
     </section>
-    <section class="card">
-      <h2 id="node">🔗 Node</h2>
-      <p>A Node is the foundational unit of the Arete network. Think of a Node as any device, digital service, or asset that participates in a system—from sensors and gateways to cloud applications and business software. Each Node is capable of representing its unique capabilities and interests to the broader network. By publishing what it can do and in what context, Nodes can interact with others in meaningful, secure, and flexible ways. In practice, Nodes are synchronized across Orchestrator and Constituent Systems, meaning their functionality and relationships are always up to date within a business environment. This enables rapid, adaptable integration without tedious manual configuration or fragile custom code—making business networks much more resilient and agile.</p>
-    </section>
-    <section class="card">
-      <h2 id="context">🔗 Context</h2>
-      <p>Context describes the environment or scope in which a Node's capabilities can be applied. It is a grouping inside a Node that might reflect a physical location (such as a building or room), a specific business function, or any other relevant operational domain. Context isn't just a tag; it's the mechanism that ensures business rules and policies are strictly enforced, so that only appropriate connections and activities happen. This way, organizations can confidently orchestrate connections—like HVAC controls only linking to certain floors, or financial systems only connecting under strict regulatory domains—reducing risk and enhancing compliance.</p>
-    </section>
-    <section class="card">
-      <h2 id="capability">🔗 Capability</h2>
-      <p>A Capability is what a Node offers or needs within a given Context. Capabilities are attached to Contexts, and define precisely what service, data, or action a Node is ready to provide or consume. These might range from sharing sensor data to processing transactions, managing access controls, or automating building services. By declaring Capabilities, organizations streamline interoperability and integration, because every interaction is standardized and governed by clear contracts attached to the right Context—eliminating ambiguity and simplifying scaling.</p>
-    </section>
-    <section class="card">
-      <h2 id="connection">🔗 Connection</h2>
-      <p>Connections in Arete are the live, operational links between Nodes, established when compatible Capabilities in a shared Context are identified. Unlike traditional networks based on static addresses, Arete connections are orchestrated dynamically based on the needs and intent of the business at any moment. This not only supports highly responsive and agile operations, but also makes everything instantly auditable, manageable, and secure through built-in policy enforcement and traceability.</p>
-    </section>
-    <section class="card">
-      <h2 id="cp">🔗 Connection Profile (CP)</h2>
-      <p>A Connection Profile (CP)—always named as cp:profile.name—is a standardized contract that defines how two Nodes interact over a Connection. Each CP specifies the roles involved (provider and consumer), details the terms of the exchange, and outlines the expectations each Node must fulfill. CPs are domain-agnostic, open-source, and reusable, which greatly simplifies integration between vendors, products, and systems. Businesses benefit from lower costs, easier compliance, and instant plug-and-play interoperability.</p>
-    </section>
-    <section class="card">
-      <h2 id="role">🔗 Role (provider or consumer)</h2>
-      <p>Every Node assumes a role in a Connection Profile: either provider—offering a capability, or consumer—making use of the capability. This division ensures clarity and accountability across the network, allowing organizations to delineate responsibility and access. Importantly, either role can apply to any system, device, or service, reflecting real-world business partnerships and supply chains, with policy defined as needed.</p>
-    </section>
-    <section class="card">
-      <h2 id="orchestrator">🔗 Orchestrator System</h2>
-      <p>An Orchestrator System is the control center of an Arete Realm. It maintains real-time inventories of Nodes, enforces policies, and brokers Connections by matching compatible Capabilities and Contexts. The Orchestrator automates complex network tasks—such as monitoring, synchronizing, and securing relationships—so businesses spend less time on IT management and more on innovation. Advanced orchestration supports scaling, flexibility, and broad interoperability between diverse systems.</p>
+
+    <section class="section defs">
+      <div class="wrap">
+        <div class="card" id="node">
+          <span class="term-tag">Node</span>
+          <h2>The unit of participation</h2>
+          <p>A <strong>Node</strong> is the foundational unit of the Arete network: any device, digital service, or asset that participates in a system &mdash; from sensors and gateways to cloud applications and business software. Each Node represents its capabilities and interests to the broader network by publishing what it can do and in what context.</p>
+          <p>Nodes are synchronized as twins between Constituent Systems and the Orchestrator, so their functionality and relationships stay current &mdash; enabling rapid, adaptable integration without manual configuration or fragile custom code.</p>
+        </div>
+
+        <div class="card" id="context">
+          <span class="term-tag">Context</span>
+          <h2>Where capabilities apply</h2>
+          <p><strong>Context</strong> describes the environment or scope in which a Node&rsquo;s capabilities can be applied &mdash; a physical location such as a building or room, a business function, or any other operational domain. Context is not just a tag: it is the mechanism that enforces business rules and policies, so only appropriate connections happen.</p>
+          <p>HVAC controls link only to their floors; financial systems connect only under the right regulatory domain &mdash; reducing risk and strengthening compliance by construction.</p>
+        </div>
+
+        <div class="card" id="capability">
+          <span class="term-tag">Capability</span>
+          <h2>What a Node offers or needs</h2>
+          <p>A <strong>Capability</strong> is what a Node offers or needs within a given Context. Capabilities define precisely what service, data, or action a Node is ready to provide or consume &mdash; from sharing sensor data to processing transactions, managing access, or automating building services.</p>
+          <p>Because every interaction is standardized and governed by clear contracts attached to the right Context, integration is unambiguous and scales cleanly.</p>
+        </div>
+
+        <div class="card" id="connection">
+          <span class="term-tag">Connection</span>
+          <h2>The live, governed link</h2>
+          <p><strong>Connections</strong> are the live, operational links between Nodes, established when compatible Capabilities in a shared Context are identified. Unlike static address-based links, Arete connections are orchestrated dynamically from business intent &mdash; and every one is auditable, manageable, and secured through built-in policy enforcement.</p>
+        </div>
+
+        <div class="card" id="cp">
+          <span class="term-tag">Connection Profile (CP)</span>
+          <h2>The standardized contract</h2>
+          <p>A <strong>Connection Profile</strong> &mdash; always named as <span class="mono">cp:profile.name</span> &mdash; is a standardized contract defining how two Nodes interact over a Connection. Each CP specifies the roles involved (provider and consumer), the terms of the exchange, and the expectations each side must fulfill.</p>
+          <p>CPs are domain-agnostic, open source, and reusable, which is what makes integration between vendors, products, and systems plug-and-play. Profiles are governed centrally in the <a href="https://cp.padi.io">CP registry</a>.</p>
+        </div>
+
+        <div class="card" id="role">
+          <span class="term-tag">Role</span>
+          <h2>Provider or consumer</h2>
+          <p>Every Node assumes a <strong>role</strong> in a Connection Profile: <strong>provider</strong> &mdash; offering a capability &mdash; or <strong>consumer</strong> &mdash; making use of it. This division brings clarity and accountability, reflecting real-world business partnerships and supply chains, with policy defined as needed. Either role can apply to any system, device, or service.</p>
+        </div>
+
+        <div class="card" id="orchestrator">
+          <span class="term-tag">Orchestrator System</span>
+          <h2>The control center of a realm</h2>
+          <p>An <strong>Orchestrator System</strong> is the control center of an Arete Realm. It maintains real-time inventories of Nodes, enforces policies, and brokers Connections by matching compatible Capabilities and Contexts. The Orchestrator automates monitoring, synchronizing, and securing relationships &mdash; so organizations spend less time on integration plumbing and more on what their assets can do together.</p>
+          <p>See how the pieces fit on the <a href="architecture.html">Architecture</a> page.</p>
+        </div>
+      </div>
     </section>
   </main>
+  <footer class="site-footer">
+    <div class="cols">
+      <div class="about">
+        <div class="f-brand"><img src="Arete-Square-L.png" alt="" /> Project Arete</div>
+        <p>Governed connectivity for systems, devices, and AI agents — orchestrating digital assets into context-driven, composable networks through open CNS/CP Connection Profiles.</p>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="fundamentals.html">Concepts</a></li>
+          <li><a href="architecture.html">Architecture</a></li>
+          <li><a href="buildings.html">Smart Buildings</a></li>
+          <li><a href="primer.html">Primer</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Build</h4>
+        <ul>
+          <li><a href="downloads.html">Downloads</a></li>
+          <li><a href="https://github.com/project-arete/sdk">Arete SDK</a></li>
+          <li><a href="https://github.com/project-arete/arete-monitor">Arete Monitor</a></li>
+          <li><a href="https://github.com/project-arete/arete-widget">Arete Widget</a></li>
+          <li><a href="https://project-arete.github.io/widget-library/">Widget Library</a></li>
+          <li><a href="https://cp.padi.io">CP Registry</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Run &amp; Connect</h4>
+        <ul>
+          <li><a href="https://aretehosting.com">Arete Hosting</a></li>
+          <li><a href="https://github.com/project-arete">GitHub Organization</a></li>
+          <li><a href="https://calendly.com/padiio/ibb">Office Hours</a></li>
+          <li><a href="mailto:info@projectarete.io">info@projectarete.io</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="tail">
+      <span>&copy; 2026 Project Arete. All rights reserved.</span>
+      <span>Built on open CNS/CP specifications.</span>
+    </div>
+  </footer>
   <script>
-  const hamburger = document.getElementById('hamburger');
-  const menu = document.getElementById('menu');
-
-  hamburger.addEventListener('click', () => {
-    menu.classList.toggle('active');
-  });
+    const hb = document.getElementById('hamburger');
+    const nav = document.getElementById('siteNav');
+    hb.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      hb.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
   </script>
 </body>
 </html>

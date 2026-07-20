@@ -1,100 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Project Arete</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Arete — Governed Connectivity for Systems, Devices, and AI Agents</title>
+  <meta name="description" content="Arete orchestrates digital assets into context-driven, composable networks through open CNS/CP Connection Profiles.">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>Project Arete</h1>
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-             <nav class="nav-menu" id="navMenu">
-            <ul id="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="fundamentals.html">Concepts</a></li>
-                <li><a href="architecture.html">Architecture</a></li>
-                <li><a href="buildings.html">Buildings</a></li>
-                <li><a href="explore.html">Resources</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <img src="Arete-Project.png" alt="Project Arete Logo" style="float: right; width: 30%; margin: 10px;">
-        <section class="cards">
-            <h1>Transforming Assets into Value</h1>
-            <div class="card">
-                <h2>Welcome to Project Arete</h2>
-                <p></p>
-                <p>Arete transforms digital assets into interoperable, context-driven participants in a secure and composable network.</p>
-                <p>By orchestrating asset interactions through standardized Connection Profiles, Arete eliminates integration barriers, streamlines management, and delivers auditable, policy-enforced connectivity. Organizations gain plug-and-play composability, zero-trust security, and the ability to automate asset relationships and workflows—accelerating digital transformation across any system or domain.</p>
-                <p>Project Arete empowers organizations to unlock interoperability, automation, and secure connectivity across systems by orchestrating digital assets into context-driven, composable networks. Here, you'll discover how this innovative platform leverages standardized profiles and intelligent orchestration to eliminate integration barriers, streamline asset relationships, and deliver plug-and-play digital transformation for any domain.</p>
+  <header class="site-header">
+    <div class="bar">
+      <a class="brand" href="index.html"><img src="Arete-Square-L.png" alt="Project Arete logo" /> Project Arete</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="fundamentals.html">Concepts</a></li>
+          <li><a href="architecture.html">Architecture</a></li>
+          <li><a href="buildings.html">Buildings</a></li>
+          <li><a href="explore.html">Resources</a></li>
+          <li><a href="downloads.html">Downloads</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <span class="eyebrow">Open source &middot; Built on CNS/CP</span>
+        <h1>Governed connectivity for systems, devices, and AI agents.</h1>
+        <p class="lead">Arete transforms digital assets into interoperable, context-driven participants in a secure and composable network &mdash; deciding <em>whether</em> two nodes should connect, under what contract, and in what context, before any data flows.</p>
+        <p class="lede-note">Arete {&#7936;&rho;&epsilon;&tau;&#942;}, pronounced <em>ah&#8209;reh&#8209;TAY</em>, is the ancient Greek concept of excellence &mdash; the full realization of potential. That is what this project does for connected assets.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://aretehosting.com">Get a live realm</a>
+          <a class="btn btn-ghost" href="fundamentals.html">Explore the concepts</a>
+        </div>
+      </div>
+    </section>
 
-            </div>
-            <div class="card card-split">
-            <div class="card-media">
-                <img src="Context.png" alt="Project Arete Context Diagram">
-            </div>
-            <div class="card-content">
-                <h2>Context-Driven Node Discovery</h2>
-                <p>Arete enables intelligent node discovery and matching through rich contextual metadata. Each <a href="https://projectarete.io/fundamentals.html#node">node</a> in the network declares its operational context—including domain, purpose, location, compliance requirements, and business function.</p>
-                <p>The <a href="https://projectarete.io/fundamentals.html#orchestrator">orchestrator</a> uses this contextual information to dynamically discover compatible nodes and establish meaningful connections. By evaluating <a href="https://projectarete.io/fundamentals.html#context">context</a> alignment, the system ensures that only appropriate nodes interact, enforcing business rules and security policies automatically. This context-aware approach eliminates manual configuration, reduces integration complexity, and enables nodes to autonomously find and connect with relevant counterparts across the distributed network.</p>
-            </div>
-            </div>
+    <section class="section">
+      <div class="wrap">
+        <h2>The model in four steps</h2>
+        <p class="section-intro">Traditional networks connect addresses and hope the rules get bolted on later. Arete is relationship-centric: nothing connects without declared identity, roles, and a matching Connection Profile.</p>
+        <div class="steps">
+          <div class="step"><span class="k">1 &middot; Declare</span><p>Nodes publish the Connection Profiles they provide or consume, inside a declared context.</p></div>
+          <div class="step"><span class="k">2 &middot; Broker</span><p>The orchestrator matches compatible provider and consumer declarations in a shared context.</p></div>
+          <div class="step"><span class="k">3 &middot; Bind</span><p>A governed connection is instantiated &mdash; validated, policy-enforced, and auditable from the start.</p></div>
+          <div class="step"><span class="k">4 &middot; Operate</span><p>The contract is monitored, adjusted, and audited across the connection&rsquo;s whole lifecycle.</p></div>
+        </div>
+      </div>
+    </section>
 
-            <div class="card card-split">
-            <div class="card-media">
-                <img src="Orchestrator.png" alt="Project Arete Orchestrator Diagram">
-            </div>
-            <div class="card-content">
-                <h2>Orchestration</h2>
-                <p>The Arete orchestrator at the center of a secure realm, managing twins of Nodes from several disparate systems to establish a cohesive, interoperable network. Each System contains Nodes that are mirrored as Twins within the orchestrator. The orchestrator dynamically aligns these Twins by evaluating their Context and Capabilities, following standardized Connection Profiles.</p>
-                <p>In this topology, the orchestrator actively governs all interactions, ensuring each Node's connection is validated by shared context and role (provider or consumer), enforcing policy and auditability across all domains. This approach transforms silos into plug-and-play, zero-trust participants, where orchestration—supported by open-source specifications—enables synchronized, policy-driven workflows between otherwise isolated systems.</p>
-            </div>
-            </div>
-            
-            <div class="card card-split">
-            <div class="card-media">
-                <img src="Capability.png" alt="Project Arete Capability Diagram">
-            </div>
-            <div class="card-content">
-                <h2>Capability-Based Connection Negotiation</h2>
-                <p>Arete facilitates service discovery and connection establishment through standardized capability declarations called Connection Profiles (CP). Nodes advertise their capabilities—either as a Provider or Consumer for a named CP. Nodes declare their capabilities, and the Orchestrator matches Nodes based on Context and matching CP Roles.</p>
-                <p> This capability-driven negotiation ensures that connections are established only when both parties can fulfill their respective roles. The system validates capability compatibility, enforces interface contracts, and manages the complete lifecycle of capability-based interactions. This approach delivers true plug-and-play integration where nodes automatically discover, negotiate, and connect based on what they can do rather than where they are or who they are.</p>
-            </div>
-            </div>
-            
-            <div class="card">
-                <h2>Get Started with Project Arete</h2>
-                <p>Ready to revolutionize how your organization connects and transforms digital assets using open-source technology? Explore how Project Arete can help eliminate integration barriers, automate workflows, and deliver seamless, secure interoperability.</p>
-                <p>Join organizations unlocking the true potential of their systems with context-driven asset orchestration.</p>
-                <ul style="margin-left: 2em;">
-                    <li>Business Leaders: Reach out to explore alignment - <a href="contact.html">Contact page</a></li>
-                    <li>System Integrators: Jump on an Office Hour session to explore Arete - <a href="explore.html">Resources</a></li>
-                    <li>Developers: Check out the Arete SDK on the <a href="explore.html">Resources</a> page</li>
-                    <li>Interested to know more: Join an Office Hour - See <a href="contact.html">Resources</a></li>
-                </ul>
-            </div>
- 
-            <img src="Arete-Project.png" alt="Project Arete Logo" style="display: block; margin: 10px auto; width: 25%;">
-        </section>
-    </main>
-    <footer>
-        <p>© 2025 Project Arete. All rights reserved.</p>
-    </footer>
-    <script>
-        const hamburger = document.getElementById('hamburger');
-        const menu = document.getElementById('menu');
-        hamburger.addEventListener('click', () => {
-            menu.classList.toggle('active');
-        });
-    </script>
+    <section class="section">
+      <div class="wrap">
+        <h2>How Arete works</h2>
+        <p class="section-intro">Three ideas carry the whole architecture: context-driven discovery, active orchestration, and capability-based binding.</p>
+
+        <div class="card card-split">
+          <div class="card-media"><img src="Context.png" alt="Project Arete context diagram"></div>
+          <div class="card-content">
+            <h2>Context-Driven Discovery</h2>
+            <p>Each <a href="fundamentals.html#node">node</a> declares its operational context &mdash; a physical location, a business function, a contract, or any other operational domain. The <a href="fundamentals.html#orchestrator">orchestrator</a> uses <a href="fundamentals.html#context">context</a> alignment to discover compatible nodes, so only appropriate nodes interact and business rules are enforced automatically.</p>
+            <p>No manual configuration, no fragile custom integrations: nodes autonomously find and connect with relevant counterparts across the network.</p>
+          </div>
+        </div>
+
+        <div class="card card-split flip">
+          <div class="card-media"><img src="Orchestrator.png" alt="Project Arete orchestrator diagram"></div>
+          <div class="card-content">
+            <h2>Orchestration</h2>
+            <p>The Arete orchestrator sits at the center of a secure realm, maintaining synchronized twins of nodes from disparate constituent systems. It aligns those twins by evaluating their contexts and capabilities, following standardized Connection Profiles.</p>
+            <p>Every connection is validated by shared context and role, with policy and auditability enforced across all domains &mdash; turning silos into plug-and-play, zero-trust participants.</p>
+          </div>
+        </div>
+
+        <div class="card card-split">
+          <div class="card-media"><img src="Capability.png" alt="Project Arete capability diagram"></div>
+          <div class="card-content">
+            <h2>Capability-Based Binding</h2>
+            <p>Nodes advertise capabilities as a <strong>provider</strong> or <strong>consumer</strong> of a named <a href="fundamentals.html#cp">Connection Profile</a>. The orchestrator pairs providers with consumers only when both parties can fulfill their roles, validates compatibility, and manages the full lifecycle of the connection.</p>
+            <p>Integration happens on the basis of what a node <em>can do</em> &mdash; not where it is or who built it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <h2>The ecosystem</h2>
+        <p class="section-intro">Everything is open and runnable today &mdash; SDKs, desktop apps, a widget catalog, and hosted orchestrators.</p>
+        <div class="tiles">
+          <div class="tile">
+            <span class="t-icon">&#129513;</span>
+            <h3>Arete SDK</h3>
+            <p>Build CNS/CP applications in Node.js, Python, or Rust. Declare capabilities, watch state, and put properties with a few lines of code.</p>
+            <div class="t-links"><a href="https://github.com/project-arete/sdk">GitHub</a></div>
+          </div>
+          <div class="tile">
+            <span class="t-icon">&#128202;</span>
+            <h3>Arete Monitor</h3>
+            <p>A live dashboard for CNS/CP realms &mdash; systems, contexts, connections, and a realm graph. Installers for macOS, Windows, and Linux.</p>
+            <div class="t-links"><a href="downloads.html">Download</a> <a href="https://github.com/project-arete/arete-monitor">GitHub</a></div>
+          </div>
+          <div class="tile">
+            <span class="t-icon">&#128161;</span>
+            <h3>Arete Widget</h3>
+            <p>Virtual devices on a realm: describe a widget in YAML &mdash; its CP capabilities plus a faceplate &mdash; and it lives as a governed node with a control panel. No hardware required.</p>
+            <div class="t-links"><a href="downloads.html">Download</a> <a href="https://github.com/project-arete/arete-widget">GitHub</a></div>
+          </div>
+          <div class="tile">
+            <span class="t-icon">&#128218;</span>
+            <h3>Widget Library</h3>
+            <p>A community-extensible catalog of YAML widget definitions, validated against the CP registry and loaded by Arete Widget at runtime.</p>
+            <div class="t-links"><a href="https://project-arete.github.io/widget-library/">Catalog</a> <a href="https://github.com/project-arete/widget-library">GitHub</a></div>
+          </div>
+          <div class="tile">
+            <span class="t-icon">&#9729;&#65039;</span>
+            <h3>Arete Hosting</h3>
+            <p>Your own orchestrator in a few clicks &mdash; sign in, pick a name, and get a ready-to-run realm at <span class="mono">&lt;name&gt;.aretehosting.com</span>. Free to use right now.</p>
+            <div class="t-links"><a href="https://aretehosting.com">aretehosting.com</a></div>
+          </div>
+          <div class="tile">
+            <span class="t-icon">&#128220;</span>
+            <h3>Connection Profiles</h3>
+            <p>CPs are governed centrally in the open CP registry. Browse existing profiles like <span class="mono">padi.light</span> before authoring your own.</p>
+            <div class="t-links"><a href="https://cp.padi.io">CP Registry</a> <a href="https://cnscp.io">CNS/CP</a></div>
+          </div>
+        </div>
+
+        <div class="cta-band">
+          <h2>Get started with Project Arete</h2>
+          <p>Ready to eliminate integration barriers and orchestrate your assets with open-source technology? Pick your path.</p>
+          <ul style="margin:14px 0 0 1.3em; color:rgba(255,255,255,.9);">
+            <li><strong>Business leaders</strong> &mdash; reach out to explore alignment on the <a style="color:#fff; text-decoration:underline;" href="contact.html">contact page</a>.</li>
+            <li><strong>System integrators</strong> &mdash; join an <a style="color:#fff; text-decoration:underline;" href="https://calendly.com/padiio/ibb">office-hours session</a> to explore Arete.</li>
+            <li><strong>Developers</strong> &mdash; spin up a realm on <a style="color:#fff; text-decoration:underline;" href="https://aretehosting.com">Arete Hosting</a> and point the <a style="color:#fff; text-decoration:underline;" href="https://github.com/project-arete/sdk">SDK</a> at it.</li>
+          </ul>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://aretehosting.com">Create an orchestrator</a>
+            <a class="btn btn-ghost" href="explore.html">Browse all resources</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="cols">
+      <div class="about">
+        <div class="f-brand"><img src="Arete-Square-L.png" alt="" /> Project Arete</div>
+        <p>Governed connectivity for systems, devices, and AI agents — orchestrating digital assets into context-driven, composable networks through open CNS/CP Connection Profiles.</p>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="fundamentals.html">Concepts</a></li>
+          <li><a href="architecture.html">Architecture</a></li>
+          <li><a href="buildings.html">Smart Buildings</a></li>
+          <li><a href="primer.html">Primer</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Build</h4>
+        <ul>
+          <li><a href="downloads.html">Downloads</a></li>
+          <li><a href="https://github.com/project-arete/sdk">Arete SDK</a></li>
+          <li><a href="https://github.com/project-arete/arete-monitor">Arete Monitor</a></li>
+          <li><a href="https://github.com/project-arete/arete-widget">Arete Widget</a></li>
+          <li><a href="https://project-arete.github.io/widget-library/">Widget Library</a></li>
+          <li><a href="https://cp.padi.io">CP Registry</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Run &amp; Connect</h4>
+        <ul>
+          <li><a href="https://aretehosting.com">Arete Hosting</a></li>
+          <li><a href="https://github.com/project-arete">GitHub Organization</a></li>
+          <li><a href="https://calendly.com/padiio/ibb">Office Hours</a></li>
+          <li><a href="mailto:info@projectarete.io">info@projectarete.io</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="tail">
+      <span>&copy; 2026 Project Arete. All rights reserved.</span>
+      <span>Built on open CNS/CP specifications.</span>
+    </div>
+  </footer>
+  <script>
+    const hb = document.getElementById('hamburger');
+    const nav = document.getElementById('siteNav');
+    hb.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      hb.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  </script>
 </body>
 </html>
