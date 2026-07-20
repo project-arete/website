@@ -150,6 +150,7 @@ main { flex: 1; }
 /* ---- grid of tiles (ecosystem / resources) ---- */
 .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 22px; }
 .tiles.two { grid-template-columns: repeat(2, 1fr); }
+.tiles.four { grid-template-columns: repeat(4, 1fr); }
 .tile {
   background: #fff; border: 1px solid var(--border); border-radius: var(--radius);
   box-shadow: var(--card-shadow); padding: 20px 20px 16px;
@@ -223,7 +224,7 @@ main { flex: 1; }
 /* ------------------------------------------------------------ responsive */
 @media (max-width: 900px) {
   .steps { grid-template-columns: repeat(2, 1fr); }
-  .tiles { grid-template-columns: repeat(2, 1fr); }
+  .tiles, .tiles.four { grid-template-columns: repeat(2, 1fr); }
   .card-split, .card-split.flip { grid-template-columns: 1fr; }
   .card-split.flip .card-media { order: 0; }
   .site-footer .cols { grid-template-columns: 1fr 1fr; }
@@ -235,7 +236,7 @@ main { flex: 1; }
   .hero h1 { font-size: 2.1rem; }
   h1 { font-size: 1.9rem; }
   .steps { grid-template-columns: 1fr; }
-  .tiles, .tiles.two { grid-template-columns: 1fr; }
+  .tiles, .tiles.two, .tiles.four { grid-template-columns: 1fr; }
   .cta-band { padding: 28px 22px; }
 
   .hamburger { display: flex; }
