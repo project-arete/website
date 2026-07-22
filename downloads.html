@@ -40,7 +40,9 @@
     <section class="section">
       <div class="wrap">
         <div class="callout warn">
-          <p><strong>A note about signing.</strong> These apps are open source and not yet code-signed, so your operating system will show a warning the first time you run them. That is expected: on <strong>macOS</strong>, right-click the app and choose <em>Open</em> (or approve it under System Settings &rarr; Privacy &amp; Security); on <strong>Windows</strong>, click <em>More info &rarr; Run anyway</em> on the SmartScreen prompt; on <strong>Linux</strong>, mark the AppImage executable (<span class="mono">chmod +x</span>) before launching. Each app&rsquo;s <em>Install guide</em> below walks through this step by step.</p>
+          <p><strong>A note about signing.</strong> These apps are open source and not yet code-signed, so your operating system will object the first time you run them. That is expected. On <strong>macOS</strong> (Sequoia and later) the warning claims the app <em>&ldquo;is damaged and can&rsquo;t be opened&rdquo;</em> &mdash; it isn&rsquo;t damaged; that is how macOS now phrases the quarantine flag on unsigned downloads, and right-click&nbsp;&rarr;&nbsp;Open no longer bypasses it. Clear the flag once in Terminal and launch normally:</p>
+          <p><span class="mono">xattr -cr "/Applications/Arete Widget.app"</span> &nbsp;or&nbsp; <span class="mono">xattr -cr "/Applications/Arete Monitor.app"</span></p>
+          <p>(On older macOS versions, right-click the app and choose <em>Open</em>.) On <strong>Windows</strong>, click <em>More info &rarr; Run anyway</em> on the SmartScreen prompt; on <strong>Linux</strong>, mark the AppImage executable (<span class="mono">chmod +x</span>) before launching. Each app&rsquo;s <em>Install guide</em> below walks through this step by step.</p>
         </div>
 
         <div class="callout">
