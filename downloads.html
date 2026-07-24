@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Downloads — Project Arete</title>
-  <meta name="description" content="Download Arete Monitor and Arete Widget for macOS, Windows, and Linux.">
+  <meta name="description" content="Download Arete Monitor and Arete Widgets for macOS, Windows, and Linux.">
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -41,7 +41,7 @@
       <div class="wrap">
         <div class="callout warn">
           <p><strong>A note about signing.</strong> These apps are open source and not yet code-signed, so your operating system will object the first time you run them. That is expected. On <strong>macOS</strong> (Sequoia and later) the warning claims the app <em>&ldquo;is damaged and can&rsquo;t be opened&rdquo;</em> &mdash; it isn&rsquo;t damaged; that is how macOS now phrases the quarantine flag on unsigned downloads, and right-click&nbsp;&rarr;&nbsp;Open no longer bypasses it. Clear the flag once in Terminal and launch normally:</p>
-          <p><span class="mono">xattr -cr "/Applications/Arete Widget.app"</span> &nbsp;or&nbsp; <span class="mono">xattr -cr "/Applications/Arete Monitor.app"</span></p>
+          <p><span class="mono">xattr -cr "/Applications/Arete Widgets.app"</span> &nbsp;or&nbsp; <span class="mono">xattr -cr "/Applications/Arete Monitor.app"</span></p>
           <p>(On older macOS versions, right-click the app and choose <em>Open</em>.) On <strong>Windows</strong>, click <em>More info &rarr; Run anyway</em> on the SmartScreen prompt; on <strong>Linux</strong>, mark the AppImage executable (<span class="mono">chmod +x</span>) before launching. Each app&rsquo;s <em>Install guide</em> below walks through this step by step.</p>
         </div>
 
@@ -49,7 +49,7 @@
           <p><strong>Every app comes in four flavours:</strong> installers for Windows, macOS, and Linux &mdash; or the <strong>web app (PWA)</strong>: nothing to install, no signing warnings, automatic updates. On a phone, open the web app and add it to your home screen (iPhone: Share &rarr; Add to Home Screen; Android: Install app). Web apps need the realm to present a valid certificate &mdash; every <span class="mono">*.aretehosting.com</span> realm qualifies.</p>
         </div>
 
-        <h2>Arete Monitor <span style="font-size:.9rem; color:var(--muted); font-weight:600;">&nbsp;v0.2.1</span></h2>
+        <h2>Arete Monitor <span style="font-size:.9rem; color:var(--muted); font-weight:600;">&nbsp;v0.2.2</span></h2>
         <p class="section-intro" style="margin-bottom:18px;">A live dashboard for CNS/CP realms &mdash; systems, contexts, connections, and a realm graph, updating in real time.</p>
         <div class="tiles four">
           <div class="tile">
@@ -57,8 +57,8 @@
             <h3>macOS</h3>
             <p>Requires macOS 11 or later. Choose the build for your Mac&rsquo;s chip.</p>
             <div class="t-links">
-              <a href="https://github.com/project-arete/arete-monitor/releases/download/v0.2.1/Arete-Monitor-0.2.1-arm64.dmg">Apple&nbsp;Silicon (.dmg)</a>
-              <a href="https://github.com/project-arete/arete-monitor/releases/download/v0.2.1/Arete-Monitor-0.2.1-x64.dmg">Intel (.dmg)</a>
+              <a href="https://github.com/project-arete/arete-monitor/releases/download/v0.2.2/Arete-Monitor-0.2.2-arm64.dmg">Apple&nbsp;Silicon (.dmg)</a>
+              <a href="https://github.com/project-arete/arete-monitor/releases/download/v0.2.2/Arete-Monitor-0.2.2-x64.dmg">Intel (.dmg)</a>
             </div>
           </div>
           <div class="tile">
@@ -66,8 +66,8 @@
             <h3>Windows</h3>
             <p>Installer for Windows 10 and later.</p>
             <div class="t-links">
-              <a href="https://github.com/project-arete/arete-monitor/releases/download/v0.2.1/Arete-Monitor-Setup-0.2.1-x64.exe">x64 installer (.exe)</a>
-              <a href="https://github.com/project-arete/arete-monitor/releases/download/v0.2.1/Arete-Monitor-Setup-0.2.1-arm64.exe">ARM64 installer (.exe)</a>
+              <a href="https://github.com/project-arete/arete-monitor/releases/download/v0.2.2/Arete-Monitor-Setup-0.2.2-x64.exe">x64 installer (.exe)</a>
+              <a href="https://github.com/project-arete/arete-monitor/releases/download/v0.2.2/Arete-Monitor-Setup-0.2.2-arm64.exe">ARM64 installer (.exe)</a>
             </div>
           </div>
           <div class="tile">
@@ -75,10 +75,10 @@
             <h3>Linux</h3>
             <p>Portable AppImage or Debian package.</p>
             <div class="t-links">
-              <a href="https://github.com/project-arete/arete-monitor/releases/download/v0.2.1/Arete-Monitor-0.2.1-x86_64.AppImage">AppImage x64</a>
-              <a href="https://github.com/project-arete/arete-monitor/releases/download/v0.2.1/Arete-Monitor-0.2.1-arm64.AppImage">AppImage ARM64</a>
-              <a href="https://github.com/project-arete/arete-monitor/releases/download/v0.2.1/Arete-Monitor-0.2.1-amd64.deb">.deb amd64</a>
-              <a href="https://github.com/project-arete/arete-monitor/releases/download/v0.2.1/Arete-Monitor-0.2.1-arm64.deb">.deb arm64</a>
+              <a href="https://github.com/project-arete/arete-monitor/releases/download/v0.2.2/Arete-Monitor-0.2.2-x86_64.AppImage">AppImage x64</a>
+              <a href="https://github.com/project-arete/arete-monitor/releases/download/v0.2.2/Arete-Monitor-0.2.2-arm64.AppImage">AppImage ARM64</a>
+              <a href="https://github.com/project-arete/arete-monitor/releases/download/v0.2.2/Arete-Monitor-0.2.2-amd64.deb">.deb amd64</a>
+              <a href="https://github.com/project-arete/arete-monitor/releases/download/v0.2.2/Arete-Monitor-0.2.2-arm64.deb">.deb arm64</a>
             </div>
           </div>
           <div class="tile">
@@ -92,7 +92,7 @@
         </div>
         <p style="margin-top:-6px;"><a href="https://github.com/project-arete/arete-monitor/blob/main/INSTALL.md">Install guide</a> &middot; <a href="https://github.com/project-arete/arete-monitor/releases">All releases</a> &middot; <a href="https://github.com/project-arete/arete-monitor">Source on GitHub</a></p>
 
-        <h2 style="margin-top:40px;">Arete Widget <span style="font-size:.9rem; color:var(--muted); font-weight:600;">&nbsp;v0.1.3</span></h2>
+        <h2 style="margin-top:40px;">Arete Widgets <span style="font-size:.9rem; color:var(--muted); font-weight:600;">&nbsp;v0.2.0</span></h2>
         <p class="section-intro" style="margin-bottom:18px;">Virtual devices on a realm &mdash; describe a widget in YAML and it lives as a governed node with a faceplate control panel. Loads community widgets from the online <a href="https://project-arete.github.io/widget-library/">widget library</a>.</p>
         <div class="tiles four">
           <div class="tile">
@@ -100,8 +100,8 @@
             <h3>macOS</h3>
             <p>Requires macOS 11 or later. Choose the build for your Mac&rsquo;s chip.</p>
             <div class="t-links">
-              <a href="https://github.com/project-arete/arete-widget/releases/download/v0.1.3/Arete-Widget-0.1.3-arm64.dmg">Apple&nbsp;Silicon (.dmg)</a>
-              <a href="https://github.com/project-arete/arete-widget/releases/download/v0.1.3/Arete-Widget-0.1.3-x64.dmg">Intel (.dmg)</a>
+              <a href="https://github.com/project-arete/arete-widget/releases/download/v0.2.0/Arete-Widget-0.2.0-arm64.dmg">Apple&nbsp;Silicon (.dmg)</a>
+              <a href="https://github.com/project-arete/arete-widget/releases/download/v0.2.0/Arete-Widget-0.2.0-x64.dmg">Intel (.dmg)</a>
             </div>
           </div>
           <div class="tile">
@@ -109,7 +109,7 @@
             <h3>Windows</h3>
             <p>Installer for Windows 10 and later (x64).</p>
             <div class="t-links">
-              <a href="https://github.com/project-arete/arete-widget/releases/download/v0.1.3/Arete-Widget-Setup-0.1.3.exe">Installer (.exe)</a>
+              <a href="https://github.com/project-arete/arete-widget/releases/download/v0.2.0/Arete-Widget-Setup-0.2.0.exe">Installer (.exe)</a>
             </div>
           </div>
           <div class="tile">
@@ -117,7 +117,7 @@
             <h3>Linux</h3>
             <p>Portable AppImage (x64).</p>
             <div class="t-links">
-              <a href="https://github.com/project-arete/arete-widget/releases/download/v0.1.3/Arete-Widget-0.1.3-x86_64.AppImage">AppImage x64</a>
+              <a href="https://github.com/project-arete/arete-widget/releases/download/v0.2.0/Arete-Widget-0.2.0-x86_64.AppImage">AppImage x64</a>
             </div>
           </div>
           <div class="tile">
@@ -125,7 +125,7 @@
             <h3>Web app (PWA)</h3>
             <p>Any browser, any device &mdash; faceplates as full-screen panels on your phone. Best as a remote control; widgets live while the app is open.</p>
             <div class="t-links">
-              <a href="https://project-arete.github.io/arete-widget-pwa/"><strong>Open Arete Widget</strong></a>
+              <a href="https://project-arete.github.io/arete-widget-pwa/"><strong>Open Arete Widgets</strong></a>
             </div>
           </div>
         </div>
@@ -133,7 +133,7 @@
 
         <div class="cta-band">
           <h2>Nothing to point them at yet?</h2>
-          <p>Create your own orchestrator on Arete Hosting in a few clicks &mdash; free right now &mdash; then connect Monitor and Widget to your realm.</p>
+          <p>Create your own orchestrator on Arete Hosting in a few clicks &mdash; free right now &mdash; then connect Monitor and Widgets to your realm.</p>
           <div class="cta-row">
             <a class="btn btn-primary" href="https://aretehosting.com">Create an orchestrator</a>
             <a class="btn btn-ghost" href="explore.html">Browse all resources</a>
@@ -163,7 +163,7 @@
           <li><a href="downloads.html">Downloads</a></li>
           <li><a href="https://github.com/project-arete/sdk">Arete SDK</a></li>
           <li><a href="https://github.com/project-arete/arete-monitor">Arete Monitor</a></li>
-          <li><a href="https://github.com/project-arete/arete-widget">Arete Widget</a></li>
+          <li><a href="https://github.com/project-arete/arete-widget">Arete Widgets</a></li>
           <li><a href="https://project-arete.github.io/widget-library/">Widget Library</a></li>
           <li><a href="https://cp.padi.io">CP Registry</a></li>
         </ul>
