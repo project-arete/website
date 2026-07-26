@@ -127,6 +127,7 @@ main { flex: 1; }
   background: #fff; border: 1px solid var(--border); border-radius: var(--radius);
   padding: 18px 18px 14px; box-shadow: var(--card-shadow);
 }
+.steps.three { grid-template-columns: repeat(3, 1fr); }
 .step .k {
   display: inline-block; font-size: .78rem; font-weight: 800; letter-spacing: .06em;
   text-transform: uppercase; color: var(--blue); margin-bottom: 6px;
@@ -186,6 +187,21 @@ main { flex: 1; }
 
 .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .92em; background: var(--panel); border: 1px solid var(--border); border-radius: 6px; padding: 1px 6px; }
 
+/* ---- copyable URL card (ARETE.md page) ---- */
+.url-card { border-color: #cfe0f8; background: linear-gradient(180deg, #fbfdff, #fff); }
+.url-card h3 { margin-bottom: 12px; }
+.url-row { display: flex; gap: 10px; align-items: stretch; flex-wrap: wrap; margin-bottom: 10px; }
+.url-box {
+  flex: 1 1 380px; min-width: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .92rem; color: var(--blue-ink);
+  background: var(--panel); border: 1px solid var(--border); border-radius: 10px;
+  padding: 12px 14px; overflow-wrap: anywhere; user-select: all;
+}
+.copy-btn { cursor: pointer; font-family: inherit; flex: 0 0 auto; }
+.copy-btn.copied { border-color: var(--blue); color: var(--blue); }
+.url-note { color: var(--muted); font-size: .92rem; margin-bottom: 18px; }
+
 /* ---- big CTA band ---- */
 .cta-band {
   margin: 44px 0 64px; padding: 40px;
@@ -222,8 +238,22 @@ main { flex: 1; }
 }
 
 /* ------------------------------------------------------------ responsive */
+/* nav collapses earlier than the rest of the layout — eight items need the room */
+@media (max-width: 860px) {
+  .hamburger { display: flex; }
+  .site-nav {
+    display: none;
+    position: absolute; left: 0; right: 0; top: 100%;
+    background: #fff; border-bottom: 1px solid var(--border);
+    box-shadow: 0 14px 30px rgba(16, 35, 61, .12);
+  }
+  .site-nav.open { display: block; }
+  .site-nav ul { flex-direction: column; padding: 10px 16px 14px; gap: 2px; }
+  .site-nav a { padding: 11px 12px; font-size: 1rem; }
+}
+
 @media (max-width: 900px) {
-  .steps { grid-template-columns: repeat(2, 1fr); }
+  .steps, .steps.three { grid-template-columns: repeat(2, 1fr); }
   .tiles, .tiles.four { grid-template-columns: repeat(2, 1fr); }
   .card-split, .card-split.flip { grid-template-columns: 1fr; }
   .card-split.flip .card-media { order: 0; }
@@ -235,19 +265,9 @@ main { flex: 1; }
   .hero { padding: 48px 0 44px; }
   .hero h1 { font-size: 2.1rem; }
   h1 { font-size: 1.9rem; }
-  .steps { grid-template-columns: 1fr; }
+  .steps, .steps.three { grid-template-columns: 1fr; }
   .tiles, .tiles.two, .tiles.four { grid-template-columns: 1fr; }
   .cta-band { padding: 28px 22px; }
 
-  .hamburger { display: flex; }
-  .site-nav {
-    display: none;
-    position: absolute; left: 0; right: 0; top: 100%;
-    background: #fff; border-bottom: 1px solid var(--border);
-    box-shadow: 0 14px 30px rgba(16, 35, 61, .12);
-  }
-  .site-nav.open { display: block; }
-  .site-nav ul { flex-direction: column; padding: 10px 16px 14px; gap: 2px; }
-  .site-nav a { padding: 11px 12px; font-size: 1rem; }
   .site-footer .cols { grid-template-columns: 1fr; }
 }

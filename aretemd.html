@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARETE.md — Build Arete Applications with Your AI Assistant</title>
+  <meta name="description" content="ARETE.md is a single file that teaches any AI coding assistant how to build applications on CNS/CP with the Arete SDK.">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="bar">
+      <a class="brand" href="index.html"><img src="Arete-Square-L.png" alt="Project Arete logo" /> Project Arete</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="fundamentals.html">Concepts</a></li>
+          <li><a href="architecture.html">Architecture</a></li>
+          <li><a href="buildings.html">Buildings</a></li>
+          <li><a href="explore.html">Resources</a></li>
+          <li><a href="aretemd.html" class="active">ARETE.md</a></li>
+          <li><a href="downloads.html">Downloads</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-head">
+      <div class="wrap">
+        <span class="eyebrow">ARETE.md</span>
+        <h1>Build Arete applications with your AI assistant.</h1>
+        <p>One file that teaches any AI coding assistant how to build applications on CNS/CP. Point your assistant at it, describe what you want to build, and it writes code that respects the architecture instead of guessing at it.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+
+        <div class="card url-card">
+          <h3>The file lives at one permanent address</h3>
+          <div class="url-row">
+            <code class="url-box" id="areteUrl">https://raw.githubusercontent.com/project-arete/sdk/main/ARETE.md</code>
+            <button class="btn btn-ghost copy-btn" id="copyUrl" type="button">Copy</button>
+          </div>
+          <p class="url-note">Always serves the current version &mdash; nothing to pin, nothing to re-download.</p>
+          <div class="cta-row" style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a class="btn btn-primary" href="https://github.com/project-arete/sdk/blob/main/ARETE.md">Read ARETE.md</a>
+            <a class="btn btn-ghost" href="https://raw.githubusercontent.com/project-arete/sdk/main/ARETE.md">View raw file</a>
+          </div>
+        </div>
+
+        <h2 style="margin-top:40px;">How to use it</h2>
+        <p class="section-intro">Three steps, whichever assistant you prefer &mdash; Claude, ChatGPT, Copilot, Cursor, or an agent running in your terminal.</p>
+        <div class="steps three">
+          <div class="step">
+            <span class="k">1 &middot; Hand it over</span>
+            <p>Paste the URL into your assistant and ask it to read the file. Or save it as <span class="mono">ARETE.md</span> in your project root, where coding agents pick it up on their own.</p>
+          </div>
+          <div class="step">
+            <span class="k">2 &middot; Describe the app</span>
+            <p>Say what you want in plain language &mdash; <em>&ldquo;a Python service that consumes <span class="mono">padi.light</span> and logs every state change&rdquo;</em>. The file supplies the architecture; you supply the intent.</p>
+          </div>
+          <div class="step">
+            <span class="k">3 &middot; Point it at a realm</span>
+            <p>Run the result against your own orchestrator on <a href="https://aretehosting.com">Arete Hosting</a>, then watch the connections bind in <a href="downloads.html">Arete Monitor</a>.</p>
+          </div>
+        </div>
+
+        <h2 style="margin-top:40px;">Why a file like this is needed</h2>
+        <div class="card">
+          <p>AI models are fluent in REST, MQTT, and message brokers &mdash; and they will apply those instincts to Arete unless told otherwise. The code that comes back compiles and reads plausibly, but it is wrong in ways that are hard to spot: it connects by address instead of by declared capability, invents Connection Profiles that were never registered, or re-declares capabilities on every reconnect and silently wipes live values off the realm.</p>
+          <p>ARETE.md front-loads the distinctions that matter. It states the mental model in the vocabulary the architecture actually uses, makes the non-negotiables explicit, and carries a list of field-verified SDK gotchas that would otherwise cost an afternoon each to rediscover.</p>
+        </div>
+
+        <h2 style="margin-top:40px;">What&rsquo;s inside</h2>
+        <div class="tiles">
+          <div class="tile">
+            <h3>The mental model</h3>
+            <p>Declare, broker, bind, operate &mdash; and the precise vocabulary that goes with it, including in-band versus out-of-band data flow.</p>
+          </div>
+          <div class="tile">
+            <h3>The non-negotiables</h3>
+            <p>Never connect by address. Every capability is a Connection Profile. Deny-by-default. Context is first-class.</p>
+          </div>
+          <div class="tile">
+            <h3>The registry rule</h3>
+            <p>How to resolve a profile from <a href="https://cp.padi.io">cp.padi.io</a> before writing a line of code, and how to read its property flags correctly.</p>
+          </div>
+          <div class="tile">
+            <h3>SDK quickstart</h3>
+            <p>The identity chain &mdash; system, node, context, capability &mdash; with working Node and Python starting points.</p>
+          </div>
+          <div class="tile">
+            <h3>Known gotchas</h3>
+            <p>Eight traps verified in the field, each with the workaround, so generated code sidesteps them from the start.</p>
+          </div>
+          <div class="tile">
+            <h3>A design checklist</h3>
+            <p>The questions to settle before writing handlers when you introduce a new capability of your own.</p>
+          </div>
+        </div>
+
+        <div class="callout" style="margin-top:26px;">
+          <p><strong>A living document.</strong> ARETE.md is maintained in the <a href="https://github.com/project-arete/sdk">Arete SDK repository</a> and updated as the SDK evolves. Because the address above always resolves to the latest version, an assistant that fetches it is reading current guidance &mdash; and there is no version to keep track of on your end.</p>
+        </div>
+
+        <div class="cta-band">
+          <h2>Start building</h2>
+          <p>Give your assistant the file, spin up a realm to point it at, and go from an idea to a governed connection in an afternoon.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://aretehosting.com">Create an orchestrator</a>
+            <a class="btn btn-ghost" href="https://github.com/project-arete/sdk">Arete SDK on GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="cols">
+      <div class="about">
+        <div class="f-brand"><img src="Arete-Square-L.png" alt="" /> Project Arete</div>
+        <p>Governed connectivity for systems, devices, and AI agents — orchestrating digital assets into context-driven, composable networks through open CNS/CP Connection Profiles.</p>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="fundamentals.html">Concepts</a></li>
+          <li><a href="architecture.html">Architecture</a></li>
+          <li><a href="buildings.html">Smart Buildings</a></li>
+          <li><a href="primer.html">Primer</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Build</h4>
+        <ul>
+          <li><a href="downloads.html">Downloads</a></li>
+          <li><a href="aretemd.html">ARETE.md</a></li>
+          <li><a href="https://github.com/project-arete/sdk">Arete SDK</a></li>
+          <li><a href="https://github.com/project-arete/arete-monitor">Arete Monitor</a></li>
+          <li><a href="https://github.com/project-arete/arete-widget">Arete Widget</a></li>
+          <li><a href="https://project-arete.github.io/widget-library/">Widget Library</a></li>
+          <li><a href="https://cp.padi.io">CP Registry</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Run &amp; Connect</h4>
+        <ul>
+          <li><a href="https://aretehosting.com">Arete Hosting</a></li>
+          <li><a href="https://github.com/project-arete">GitHub Organization</a></li>
+          <li><a href="https://calendly.com/padiio/ibb">Office Hours</a></li>
+          <li><a href="mailto:info@projectarete.io">info@projectarete.io</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="tail">
+      <span>&copy; 2026 Project Arete. All rights reserved.</span>
+      <span>Built on open CNS/CP specifications.</span>
+    </div>
+  </footer>
+  <script>
+    const hb = document.getElementById('hamburger');
+    const nav = document.getElementById('siteNav');
+    hb.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      hb.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    const copyBtn = document.getElementById('copyUrl');
+    copyBtn.addEventListener('click', async () => {
+      const url = document.getElementById('areteUrl').textContent.trim();
+      try {
+        await navigator.clipboard.writeText(url);
+      } catch (e) {
+        const r = document.createRange();
+        r.selectNodeContents(document.getElementById('areteUrl'));
+        const s = window.getSelection();
+        s.removeAllRanges(); s.addRange(r);
+        return;
+      }
+      const original = copyBtn.textContent;
+      copyBtn.textContent = 'Copied';
+      copyBtn.classList.add('copied');
+      setTimeout(() => { copyBtn.textContent = original; copyBtn.classList.remove('copied'); }, 1800);
+    });
+  </script>
+</body>
+</html>
