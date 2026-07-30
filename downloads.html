@@ -42,7 +42,7 @@
       <div class="wrap">
         <div class="callout warn">
           <p><strong>A note about signing.</strong> These apps are open source and not yet code-signed, so your operating system will object the first time you run them. That is expected. On <strong>macOS</strong> (Sequoia and later) the warning claims the app <em>&ldquo;is damaged and can&rsquo;t be opened&rdquo;</em> &mdash; it isn&rsquo;t damaged; that is how macOS now phrases the quarantine flag on unsigned downloads, and right-click&nbsp;&rarr;&nbsp;Open no longer bypasses it. Clear the flag once in Terminal and launch normally:</p>
-          <p><span class="mono">xattr -cr "/Applications/Arete Widgets.app"</span> &nbsp;or&nbsp; <span class="mono">xattr -cr "/Applications/Arete Monitor.app"</span></p>
+          <p><span class="mono">xattr -cr "/Applications/Arete Widgets.app"</span><button class="copy-inline" type="button" data-copy="xattr -cr &quot;/Applications/Arete Widgets.app&quot;" aria-label="Copy command for Arete Widgets" title="Copy"><svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button> &nbsp;or&nbsp; <span class="mono">xattr -cr "/Applications/Arete Monitor.app"</span><button class="copy-inline" type="button" data-copy="xattr -cr &quot;/Applications/Arete Monitor.app&quot;" aria-label="Copy command for Arete Monitor" title="Copy"><svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></button></p>
           <p>(On older macOS versions, right-click the app and choose <em>Open</em>.) On <strong>Windows</strong>, click <em>More info &rarr; Run anyway</em> on the SmartScreen prompt; on <strong>Linux</strong>, mark the AppImage executable (<span class="mono">chmod +x</span>) before launching. Each app&rsquo;s <em>Install guide</em> below walks through this step by step.</p>
         </div>
 
@@ -200,6 +200,36 @@
     hb.addEventListener('click', () => {
       const open = nav.classList.toggle('open');
       hb.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    // Inline copy icons: any button carrying data-copy puts that text on the
+    // clipboard and flips its icon to a tick for a moment. Falls back to
+    // selecting the command text when the Clipboard API is unavailable.
+    document.querySelectorAll('.copy-inline[data-copy]').forEach((btn) => {
+      btn.addEventListener('click', async () => {
+        const text = btn.getAttribute('data-copy');
+        try {
+          await navigator.clipboard.writeText(text);
+        } catch (e) {
+          const cmd = btn.previousElementSibling;
+          if (cmd) {
+            const r = document.createRange();
+            r.selectNodeContents(cmd);
+            const s = window.getSelection();
+            s.removeAllRanges(); s.addRange(r);
+          }
+          return;
+        }
+        const label = btn.getAttribute('aria-label');
+        btn.classList.add('copied');
+        btn.setAttribute('title', 'Copied');
+        btn.setAttribute('aria-label', 'Copied');
+        setTimeout(() => {
+          btn.classList.remove('copied');
+          btn.setAttribute('title', 'Copy');
+          btn.setAttribute('aria-label', label);
+        }, 1800);
+      });
     });
   </script>
 </body>

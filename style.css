@@ -200,6 +200,24 @@ main { flex: 1; }
 }
 .copy-btn { cursor: pointer; font-family: inherit; flex: 0 0 auto; }
 .copy-btn.copied { border-color: var(--blue); color: var(--blue); }
+
+/* ---- inline copy icon (sits directly after a .mono command) ---- */
+.copy-inline {
+  display: inline-flex; align-items: center; justify-content: center;
+  vertical-align: baseline; margin-left: 5px; padding: 3px;
+  width: 24px; height: 24px;
+  background: transparent; border: 1px solid transparent; border-radius: 6px;
+  color: var(--muted); cursor: pointer;
+  transition: color .15s ease, background-color .15s ease, border-color .15s ease;
+}
+.copy-inline svg { width: 14px; height: 14px; display: block; }
+.copy-inline .icon-check { display: none; }
+.copy-inline:hover { color: var(--blue); background: #fff; border-color: var(--border); }
+.copy-inline:focus-visible { outline: 2px solid var(--blue); outline-offset: 1px; }
+.copy-inline.copied { color: var(--blue); border-color: var(--blue); background: #fff; }
+.copy-inline.copied .icon-copy { display: none; }
+.copy-inline.copied .icon-check { display: block; }
+@media (prefers-reduced-motion: reduce) { .copy-inline { transition: none; } }
 .url-note { color: var(--muted); font-size: .92rem; margin-bottom: 18px; }
 
 /* ---- big CTA band ---- */
