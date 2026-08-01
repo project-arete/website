@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arete Gateway — Join a CNS/CP Realm over Plain HTTP</title>
+  <meta name="description" content="The Arete Gateway lets any application participate in governed CNS/CP realms through a local REST and SSE API — declare capabilities, watch connections appear, exchange properties. No SDK embedded in your app.">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="bar">
+      <a class="brand" href="index.html"><img src="Arete-Square-L.png" alt="Project Arete logo" /> Project Arete</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation" data-nav="nav-v2">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="has-sub">
+            <button type="button" class="nav-group" aria-haspopup="true" aria-expanded="false">Learn <span class="caret" aria-hidden="true">&#9662;</span></button>
+            <ul class="sub">
+              <li><a href="fundamentals.html">Concepts</a></li>
+              <li><a href="architecture.html">Architecture</a></li>
+              <li><a href="buildings.html">Buildings</a></li>
+              <li><a href="primer.html">Primer</a></li>
+            </ul>
+          </li>
+          <li class="has-sub">
+            <button type="button" class="nav-group active" aria-haspopup="true" aria-expanded="false">Build <span class="caret" aria-hidden="true">&#9662;</span></button>
+            <ul class="sub">
+              <li><a href="gateway.html" class="active">Arete Gateway</a></li>
+              <li><a href="aretemd.html">ARETE.md</a></li>
+              <li><a href="downloads.html">Downloads</a></li>
+            </ul>
+          </li>
+          <li><a href="explore.html">Resources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-head">
+      <div class="wrap">
+        <span class="eyebrow">Arete Gateway</span>
+        <h1>Join a governed realm with four HTTP calls.</h1>
+        <p>The Arete Gateway is a small local service that lets <em>any</em> application participate in CNS/CP realms without embedding the SDK. Your app speaks plain REST to <span class="mono">localhost</span>; realm-side, the gateway is a full CNS/CP participant. Declare what you provide or consume — connections appear, events arrive, properties flow.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <h2>Why a gateway</h2>
+        <p class="section-intro">Most systems that should participate in a realm — building management software, legacy services, scripts, constrained devices — will never embed a Node, Python, or Rust SDK. Almost everything can make an HTTP call.</p>
+
+        <div class="card">
+          <p>The gateway carries the architecture's asymmetry into its API: <strong>declarations are writable; connections are read-only.</strong> Your application performs Declare — the substrate performs Reconcile, Match, and Bind. Connections <em>appear</em> to your app; they are never created by it. If you find yourself wanting <span class="mono">POST /connections</span>, that is the address-centric habit the architecture replaces.</p>
+          <p>It also encodes the field truths of building on CNS/CP so your app inherits them for free: declarations are validated against the <a href="https://cp.padi.io">CP registry</a> before they are accepted, replay after restart is value-safe, registration is serialized, and reconnection is handled with clean single-use realm sessions. The <a href="aretemd.html">ARETE.md</a> gotcha list is, in effect, implemented behind an API.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step"><span class="k">1 &middot; Declare</span><p>PUT a node, a context, and a capability declaration — provider or consumer of a registered Connection Profile.</p></div>
+          <div class="step"><span class="k">2 &middot; Bound</span><p>The orchestrator matches and binds. The connection materializes as a read-only resource with live properties.</p></div>
+          <div class="step"><span class="k">3 &middot; React</span><p>Events stream over SSE or signed webhooks: <span class="mono">connection.created</span>, <span class="mono">property.changed</span> — with origin, previous value, and ordering.</p></div>
+          <div class="step"><span class="k">4 &middot; Write</span><p>PUT property values back — broadcast at capability level, or addressed into one specific connection.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <h2>The four-call walkthrough</h2>
+        <p class="section-intro">A light that participates meaningfully in a realm, end to end. Governed, per-event, auditable — and not a line of SDK in the app.</p>
+        <div class="card">
+<pre class="code-block"><span class="c"># 1 — a node for the app</span>
+PUT /v0/realms/myrealm/nodes/lobby-light            { "name": "Lobby Light" }
+
+<span class="c"># 2 — the context it participates in</span>
+PUT .../nodes/lobby-light/contexts/lobby            { "name": "Lobby" }
+
+<span class="c"># 3 — what it consumes (validated against the CP registry)</span>
+PUT .../contexts/lobby/declarations/consumer/padi.light
+                                                    { "properties": { "cState": "0" } }
+
+<span class="c"># 4 — where to hear about it</span>
+GET /v0/events?stream=sse                           <span class="c"># or register a signed webhook</span></pre>
+          <p>When the substrate binds a switch, a <span class="mono">connection.created</span> event arrives; <span class="mono">property.changed</span> events carry <span class="mono">sOut</span>; the app answers with <span class="mono">PUT &hellip;/properties/cState</span>. To leave, <span class="mono">DELETE</span> the declaration — the substrate severs, connections are no more deleted by the app than they were created by it.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <h2>What ships in v0.1</h2>
+        <div class="tiles">
+          <div class="tile">
+            <span class="t-icon">&#128421;&#65039;</span>
+            <h3>Built-in console</h3>
+            <p>A live view at <span class="mono">localhost:8420/ui</span> — realm connectivity, your declaration tree with live properties, connections as they materialize, and the event tail. Own-side properties editable inline through the same governed endpoints as any app.</p>
+          </div>
+          <div class="tile">
+            <span class="t-icon">&#128276;</span>
+            <h3>Events, two ways</h3>
+            <p>Server-Sent Events with resume, and webhook delivery — HMAC-SHA256 signed, strictly ordered per hook, retried at-least-once for 24 hours. Same envelopes, same filters.</p>
+          </div>
+          <div class="tile">
+            <span class="t-icon">&#128273;</span>
+            <h3>Capability tokens</h3>
+            <p>Mint a narrow credential for a constrained device: one connection, named properties, read or write, revoked automatically when the binding is severed. The device uses the same property endpoints as an app — only the credential differs.</p>
+          </div>
+        </div>
+
+        <div class="tiles">
+          <div class="tile">
+            <span class="t-icon">&#127760;</span>
+            <h3>Multi-realm</h3>
+            <p>One gateway holds sessions to several realms at once; everything the API does is scoped by a realm handle. Per-realm credentials stay in gateway config — apps never see them.</p>
+          </div>
+          <div class="tile">
+            <span class="t-icon">&#128260;</span>
+            <h3>Idempotent by construction</h3>
+            <p>Writes are PUT with client-chosen IDs. Retries are safe, redeclaration is a no-op, conflicts are explicit 409s. Declarations persist and replay across gateway restarts and realm reconnects — value-safe.</p>
+          </div>
+          <div class="tile">
+            <span class="t-icon">&#128737;&#65039;</span>
+            <h3>Honest scope</h3>
+            <p>v0.1 is deliberately localhost: one local API token, bound to 127.0.0.1. LAN and hosted placement are documented as unsupported until per-app tokens land. The limits are written down, not discovered.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <h2>Get it</h2>
+        <p class="section-intro">Distributed on GitHub — clone or grab the release tarball. Node 18+ is the only prerequisite; there is no build step.</p>
+        <div class="card">
+<pre class="code-block">git clone https://github.com/project-arete/arete-gateway.git
+cd arete-gateway
+npm install                          <span class="c"># applies the SDK patch set automatically</span>
+cp config.example.json config.json   <span class="c"># point it at your realm</span>
+npm start                            <span class="c"># API on localhost:8420, console at /ui</span></pre>
+          <p>Need a realm to point it at? <a href="https://aretehosting.com">Arete Hosting</a> gives you one in a few clicks. The repository's <a href="https://github.com/project-arete/arete-gateway/blob/main/INSTALL.md">INSTALL.md</a> walks through setup step by step, and the README documents the full API surface, the event contract, and the design decisions.</p>
+        </div>
+
+        <div class="callout">
+          <p><strong>Building with an AI assistant?</strong> The gateway pairs naturally with <a href="aretemd.html">ARETE.md</a> — point your assistant at the briefing file, tell it your app should talk to the local gateway, and describe what you want to build.</p>
+        </div>
+
+        <div class="cta-band">
+          <h2>Put an existing system on a realm this afternoon.</h2>
+          <p>Spin up an orchestrator, start the gateway beside your application, and declare your first capability — the walkthrough above is the whole integration.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://github.com/project-arete/arete-gateway">Get the Gateway</a>
+            <a class="btn btn-ghost" href="https://aretehosting.com">Create a realm</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="cols">
+      <div class="about">
+        <div class="f-brand"><img src="Arete-Square-L.png" alt="" /> Project Arete</div>
+        <p>Governed connectivity for systems, devices, and AI agents — orchestrating digital assets into context-driven, composable networks through open CNS/CP Connection Profiles.</p>
+      </div>
+      <div>
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="fundamentals.html">Concepts</a></li>
+          <li><a href="architecture.html">Architecture</a></li>
+          <li><a href="buildings.html">Smart Buildings</a></li>
+          <li><a href="primer.html">Primer</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Build</h4>
+        <ul>
+          <li><a href="downloads.html">Downloads</a></li>
+          <li><a href="aretemd.html">ARETE.md</a></li>
+          <li><a href="https://github.com/project-arete/arete-gateway">Arete Gateway</a></li>
+          <li><a href="https://github.com/project-arete/sdk">Arete SDK</a></li>
+          <li><a href="https://github.com/project-arete/arete-monitor">Arete Monitor</a></li>
+          <li><a href="https://github.com/project-arete/arete-widget">Arete Widget</a></li>
+          <li><a href="https://project-arete.github.io/widget-library/">Widget Library</a></li>
+          <li><a href="https://cp.padi.io">CP Registry</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Run &amp; Connect</h4>
+        <ul>
+          <li><a href="https://aretehosting.com">Arete Hosting</a></li>
+          <li><a href="https://github.com/project-arete">GitHub Organization</a></li>
+          <li><a href="https://calendly.com/padiio/ibb">Office Hours</a></li>
+          <li><a href="mailto:info@projectarete.io">info@projectarete.io</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="tail">
+      <span>&copy; 2026 Project Arete. All rights reserved.</span>
+      <span>Built on open CNS/CP specifications.</span>
+    </div>
+  </footer>
+  <script>
+    const hb = document.getElementById('hamburger');
+    const nav = document.getElementById('siteNav');
+    hb.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      hb.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    document.querySelectorAll('.has-sub > .nav-group').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const li = btn.parentElement;
+        const open = li.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        document.querySelectorAll('.has-sub.open').forEach((other) => {
+          if (other !== li) {
+            other.classList.remove('open');
+            other.querySelector('.nav-group').setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+    });
+    document.addEventListener('click', (e) => {
+      if (e.target.closest('.has-sub')) return;
+      document.querySelectorAll('.has-sub.open').forEach((li) => {
+        li.classList.remove('open');
+        li.querySelector('.nav-group').setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>

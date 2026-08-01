@@ -15,15 +15,27 @@
       <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-      <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+      <nav class="site-nav" id="siteNav" aria-label="Main navigation" data-nav="nav-v2">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="fundamentals.html">Concepts</a></li>
-          <li><a href="architecture.html">Architecture</a></li>
-          <li><a href="buildings.html">Buildings</a></li>
+          <li class="has-sub">
+            <button type="button" class="nav-group" aria-haspopup="true" aria-expanded="false">Learn <span class="caret" aria-hidden="true">&#9662;</span></button>
+            <ul class="sub">
+              <li><a href="fundamentals.html">Concepts</a></li>
+              <li><a href="architecture.html">Architecture</a></li>
+              <li><a href="buildings.html">Buildings</a></li>
+              <li><a href="primer.html">Primer</a></li>
+            </ul>
+          </li>
+          <li class="has-sub">
+            <button type="button" class="nav-group active" aria-haspopup="true" aria-expanded="false">Build <span class="caret" aria-hidden="true">&#9662;</span></button>
+            <ul class="sub">
+              <li><a href="gateway.html">Arete Gateway</a></li>
+              <li><a href="aretemd.html">ARETE.md</a></li>
+              <li><a href="downloads.html" class="active">Downloads</a></li>
+            </ul>
+          </li>
           <li><a href="explore.html">Resources</a></li>
-          <li><a href="aretemd.html">ARETE.md</a></li>
-          <li><a href="downloads.html" class="active">Downloads</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -172,6 +184,7 @@
         <ul>
           <li><a href="downloads.html">Downloads</a></li>
           <li><a href="aretemd.html">ARETE.md</a></li>
+          <li><a href="https://github.com/project-arete/arete-gateway">Arete Gateway</a></li>
           <li><a href="https://github.com/project-arete/sdk">Arete SDK</a></li>
           <li><a href="https://github.com/project-arete/arete-monitor">Arete Monitor</a></li>
           <li><a href="https://github.com/project-arete/arete-widget">Arete Widgets</a></li>
@@ -201,6 +214,27 @@
       const open = nav.classList.toggle('open');
       hb.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
+    document.querySelectorAll('.has-sub > .nav-group').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const li = btn.parentElement;
+        const open = li.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        document.querySelectorAll('.has-sub.open').forEach((other) => {
+          if (other !== li) {
+            other.classList.remove('open');
+            other.querySelector('.nav-group').setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+    });
+    document.addEventListener('click', (e) => {
+      if (e.target.closest('.has-sub')) return;
+      document.querySelectorAll('.has-sub.open').forEach((li) => {
+        li.classList.remove('open');
+        li.querySelector('.nav-group').setAttribute('aria-expanded', 'false');
+      });
+    });
+
 
     // Inline copy icons: any button carrying data-copy puts that text on the
     // clipboard and flips its icon to a tick for a moment. Falls back to
