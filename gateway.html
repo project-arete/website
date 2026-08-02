@@ -88,6 +88,10 @@ PUT .../contexts/lobby/declarations/consumer/padi.light
 GET /v0/events?stream=sse                           <span class="c"># or register a signed webhook</span></pre>
           <p>When the substrate binds a switch, a <span class="mono">connection.created</span> event arrives; <span class="mono">property.changed</span> events carry <span class="mono">sOut</span>; the app answers with <span class="mono">PUT &hellip;/properties/cState</span>. To leave, <span class="mono">DELETE</span> the declaration — the substrate severs, connections are no more deleted by the app than they were created by it.</p>
         </div>
+
+        <div class="callout">
+          <p><strong>Where does <span class="mono">myrealm</span> come from?</strong> The gateway — not the app — holds the realm connections. Each realm is declared in the gateway's <span class="mono">config.json</span> (host, credentials, one entry per realm; or attached at runtime via <span class="mono">PUT /v0/realms/{realm}</span>), and the entry's key becomes the local handle that scopes every API path. Apps name the handle and never see realm credentials — one gateway can hold several realms at once.</p>
+        </div>
       </div>
     </section>
 
@@ -127,6 +131,22 @@ GET /v0/events?stream=sse                           <span class="c"># or registe
             <span class="t-icon">&#128737;&#65039;</span>
             <h3>Honest scope</h3>
             <p>v0.1 is deliberately localhost: one local API token, bound to 127.0.0.1. LAN and hosted placement are documented as unsupported until per-app tokens land. The limits are written down, not discovered.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <h2>A self-describing API</h2>
+        <p class="section-intro">The gateway ships its own contract: an OpenAPI 3.1 description of every operation, served by the gateway itself and rendered as an interactive reference.</p>
+
+        <div class="card card-split">
+          <div class="card-media"><img src="gateway-docs.png" alt="The gateway's built-in Swagger UI, showing read-only connection endpoints and the declaration write surface"></div>
+          <div class="card-content">
+            <h2>Browse it, try it, generate from it</h2>
+            <p>Open <span class="mono">localhost:8420/docs</span> for the live API reference — every operation, schema, and error code, with <em>Try&nbsp;it&nbsp;out</em> against your own realm. Authorize with the local token and the four-call walkthrough becomes clickable; even the refusals teach the architecture, returning the same governed 422s your application would see.</p>
+            <p>The machine-readable document at <span class="mono">/v0/openapi.json</span> imports straight into Postman, generates client stubs in any language, and — paired with <a href="aretemd.html">ARETE.md</a> — gives an AI coding assistant everything it needs to write a correct integration.</p>
           </div>
         </div>
       </div>
